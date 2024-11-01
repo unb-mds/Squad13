@@ -41,13 +41,13 @@ Estes requisitos garantem a qualidade do site, incluindo performance e usabilida
 Esses requisitos tratam das informações e dados apresentados no site.
 
 ### - Dados de gastos públicos
-- Incluir dados atualizados e categorizaados por setor;
+- Incluir dados atualizados e categorizados por setor;
 - Especificar a fonte de dados;
 - Informar a data de última atualização dos dados.
 ### - Documentação
 - Incluir uma seção de "Sobre" explicando o objetivo do projeto e o propósito do site;
 - Especificar a fonte de dados;
-- Informar um guia de uso para mostrar como navegar e utilizar as funcionalidades. 
+- Disponibilizar um guia de uso para mostrar como navegar e utilizar as funcionalidades. 
 ### - Contato
 - Adicionar uma seção de "Contato" para usuários que queiram sugerir melhorias ou apontar erros.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
