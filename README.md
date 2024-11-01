@@ -21,10 +21,10 @@ Este projeto consiste na criação de um site hospedado no GitHub Pages para a a
 O projeto está sendo desenvolvido por um grupo de seis alunos da disciplina, conforme lista abaixo:
 
 - **[Arthur Mendonça](https://github.com/ArtyMend07)** - Função e responsabilidade
-- **[Gabriel da Cunha](https://github.com/Nibaacriba)** - Função e responsabilidade 
+- **[Gabriel da Cunha](https://github.com/Nibaacriba)** - Criação dos requisitos 
 - **[Gabriel Lopes](https://github.com/BrzGab)** - Função e responsabilidade
 - **[João Pedro](https://github.com/johnaopedro)** - Função e responsabilidade
-- **[Julia Gabriela](https://github.com/JuliaGabP)** - Função e responsabilidade
+- **[Julia Gabriela](https://github.com/JuliaGabP)** - Criação dos requisitos
 - **[Lucas Mendonça](https://github.com/lucasarruda9)** - Função e responsabilidade
 
 ## 🚀 Estrutura do Projeto
