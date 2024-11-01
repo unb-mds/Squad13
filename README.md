@@ -24,7 +24,7 @@ O projeto está sendo desenvolvido por um grupo de seis alunos da disciplina, co
 - **[Gabriel da Cunha](https://github.com/Nibaacriba)** - Criação dos requisitos 
 - **[Gabriel Lopes](https://github.com/BrzGab)** - Função e responsabilidade
 - **[João Pedro](https://github.com/johnaopedro)** - Função e responsabilidade
-- **[Julia Gabriela](https://github.com/JuliaGabP)** - Criação dos requisitos
+- **[Julia Gabriela](https://github.com/JuliaGabP)** - Criação dos requisitos, desenvolvimento das atas de reunião
 - **[Lucas Mendonça](https://github.com/lucasarruda9)** - Função e responsabilidade
 
 ## 🚀 Estrutura do Projeto
