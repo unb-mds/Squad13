@@ -28,15 +28,30 @@ Estes requisitos garantem a qualidade do site, incluindo performance e usabilida
 - Manter consistência visual e de navegação em todas as páginas.
 ### - Acessibilidade
 - Incluir testo alternativo para imagens e descrição para gráficos e tabelas;
--
+- Incluir acessibilidade para deficientes visuais.
 ### - Compatibilidade
--
+- Suportar os principais navegadores(Chrome, Firefox, Safari, Edge).
 ### - Escalabilidade
--
+- O design do site e a estrutura do código devem permitir a fácil adição de novos dados e categorias no futuro.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Requisitos de Conteúdo
-
+Esses requisitos tratam das informações e dados apresentados no site.
+### - Dados de gastos públicos
+- Incluir dados atualizados e categorizaados por setor;
+- Especificar a fonte de dados;
+- Informar a data de última atualização dos dados.
+### - Documentação
+- Incluir uma seção de "Sobre" explicando o objetivo do projeto e o propósito do site;
+- Especificar a fonte de dados;
+- Informar um guia de uso para mostrar como navegar e utilizar as funcionalidades. 
+### - Contato
+- Adicionar uma seção de "Contato" para usuários que queiram sugerir melhorias ou apontar erros.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Requisitos de Colaboração
-
+Para organização do trabalho em equipe e o desenvolvimento colaborativo.
+### - Controle
+-
+### -
+-
+-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
