@@ -9,6 +9,7 @@ São essenciais para o funcionamento do site e definem as funcionalidades que el
 - Permitir filtros por categoriaa de gastos (ex.: saúde, educação, segurança);
 - Oferecer a opção de visualizar os gastos por período (ano, trimestre, mês);
 - Fornecer uma opção para download dos dados em formatos comuns;
+- Informar os dados básicos sobre os fornecedores pagos com o dinheiro público; 
 - Incluir uma área de informações sobre os valores médios gastos, possuindo alertas caso os dados do dia estejam fora do comum.
 ### - Navegação:
 - Incluir uma barra de navegação para acessar diferentes seções do site;
