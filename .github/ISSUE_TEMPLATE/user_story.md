@@ -1,6 +1,6 @@
 ---
 name: User Story
-description: Use este template para descrever uma nova história de usuário.
+about: Use este template para descrever uma nova história de usuário.
 title: "[USER STORY]"
 labels: user story
 assignees: ""

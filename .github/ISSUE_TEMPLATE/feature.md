@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-description: Use este template para solicitar uma nova funcionalidade.
+about: Use este template para solicitar uma nova funcionalidade.
 title: "[FEATURE]"
 labels: enhancement
 assignees: ""

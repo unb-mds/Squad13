@@ -1,6 +1,6 @@
 ---
 name: Task
-description: Use este template para criar uma nova tarefa.
+about: Use este template para criar uma nova tarefa.
 title: "[TASK]"
 labels: task
 assignees: ""

@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-description: Use este template para relatar um bug.
+about: Use este template para relatar um bug.
 title: "[BUG]"
 labels: bug
 assignees: ""
