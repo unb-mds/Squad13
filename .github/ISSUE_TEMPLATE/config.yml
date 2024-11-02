@@ -1,22 +1,21 @@
----
-name: Template user story
-about: Template user story
-title: ''
-labels: ''
-assignees: ''
-
----
-
-
-# Descrição
-
-**Eu, como ,
-Desejo
-Para**
-
-
-# Tarefas
-- [ ] Tarefa 01
-
-# Critérios de Aceitação
-- [ ] Critério  01
+blank_issues_enabled: false
+issue_templates:
+  - title: "User Story"
+    description: "Use este template para descrever uma nova funcionalidade do ponto de vista do usuário."
+    filename: "user_story.md"
+  - title: "Bug Report"
+    description: "Use este template para relatar um erro encontrado no sistema."
+    filename: "bug_report.md"
+  - title: "Task"
+    description: "Use este template para registrar uma tarefa a ser realizada."
+    filename: "task.md"
+  - title: "Feature"
+    description: "Use este template para solicitar uma nova feature."
+    filename: "feature.md"
+  - title: "Improvement"
+    description: "Use este template para sugerir melhorias no sistema."
+    filename: "improvement.md"
+instructions:
+  - "Por favor, use um dos templates fornecidos ao criar uma nova issue."
+  - "Descreva claramente o problema ou solicitação para que possamos atendê-lo mais rapidamente."
+  - "Verifique se você já não reportou esse problema antes de abrir uma nova issue."
