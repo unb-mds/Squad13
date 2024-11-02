@@ -1,26 +1,25 @@
-# Feature
+---
+name: Feature Request
+description: Use este template para solicitar uma nova funcionalidade.
+title: "[FEATURE]"
+labels: enhancement
+assignees: ""
+---
 
-## Título
+**Resumo da Solicitação**
+Uma descrição clara e concisa da nova funcionalidade que você gostaria de solicitar.
 
-[Insira o título da feature aqui]
+**Motivação**
+Por que você acha que essa funcionalidade é necessária? Quais problemas ela resolve?
 
-## Descrição
+**Descrição**
+Uma descrição detalhada de como você imagina que essa funcionalidade deve funcionar.
 
-[Descreva a feature que você deseja implementar]
+**Capturas de Tela**
+Se aplicável, adicione capturas de tela ou mockups para ajudar a visualizar a funcionalidade.
 
-## Justificativa
+**Critérios de Aceitação**
+Liste os critérios que devem ser atendidos para que a funcionalidade seja considerada completa.
 
-Por que esta feature é necessária? Quais problemas ela resolve?
-
-## Critérios de Aceitação
-
-- [Critério 1]
-- [Critério 2]
-
-## Dependências
-
-- [Outras features, bugs ou tarefas que dependem desta]
-
-## Notas
-
-- [Outras considerações ou informações relevantes]
+**Relação com a Sprint**
+Indique se essa solicitação está relacionada a alguma Sprint específica.

@@ -1,26 +1,25 @@
-# Tarefa
+---
+name: Task
+description: Use este template para criar uma nova tarefa.
+title: "[TASK]"
+labels: task
+assignees: ""
+---
 
-## Título
+**Descrição da Tarefa**
+Uma descrição clara e concisa da tarefa a ser realizada.
 
-[Insira o título da tarefa aqui]
+**Objetivos**
+Liste os objetivos que essa tarefa deve atingir.
 
-## Descrição
+**Etapas para Conclusão**
 
-[Descreva a tarefa a ser realizada]
+1. Primeiro passo
+2. Segundo passo
+3. Terceiro passo
 
-## Critérios de Aceitação
+**Recursos Necessários**
+Liste qualquer recurso ou documentação que possa ser útil para completar essa tarefa.
 
-- [Critério 1]
-- [Critério 2]
-
-## Responsável
-
-- [Nome do responsável]
-
-## Prioridade
-
-- [Baixa / Média / Alta]
-
-## Notas
-
-- [Outras considerações ou informações relevantes]
+**Relação com a Sprint**
+Indique se essa tarefa está relacionada a alguma Sprint específica.
