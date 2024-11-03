@@ -1,6 +1,6 @@
 # O que é Scrum?<br>
-  O Scrum, criado por  Ken Schwaber e Jeff Sutherland, é um método ágil e prático fundamentado em sprints, garantindo revisão e aperfeiçoamento constantes para que o resultado seja sempre o melhor possível.
-Essa metodologia Traz consigo diversos benefícios para quem o implementa, como a organização e o desempenho. A organizacao é feita por meio de Daily Scrum, que facilitam a identificação e resolução de problemas, ajudando as equipes a se adaptarem rapidamente às mudanças, resolvendo problemas de forma colaborativa e entregando resultados de alta qualidade de maneira eficiente.  
+  O Scrum, criado por  Ken Schwaber e Jeff Sutherland, é um método ágil e prático fundamentado em sprints, garantindo revisão e aperfeiçoamentos constantes para que o resultado seja sempre o melhor possível.
+Essa metodologia traz consigo diversos benefícios para quem o implementa, como a organização e o desempenho. A organizacao é feita por meio de Daily Scrum, que facilitam a identificação e resolução de problemas, ajudando as equipes a se adaptarem rapidamente às mudanças, resolvendo problemas de forma colaborativa e entregando resultados de alta qualidade de maneira eficiente.  
 <br>
 <br>
   Para estruturar um trabalho com Scrum, é preciso definir papéis, criar o backlog de requisitos (ou product backlog), planejar sprints e definir as cerimônias para acompanhar o progresso do projeto.
@@ -88,7 +88,7 @@ Será utilizada uma API do governo para obter dados que serão exibidos em um gr
 |:-|:-|
 | Alta	🔴| Foco em documentar o escopo, os requisitos, a arquitetura e iniciar a estrutura do repositório |
 | Média	🟡| Configuração básica do ambiente para permitir testes iniciais com Flask, HTML e CSS |
-| Baixa 🟢| Integração mais avançada entre front e back-end pode ser explorada, mas é prioritária na segunda sprint |
+| Baixa 🟢| Integração mais avançada entre front e back-end pode ser explorada, mas é prioritária na segunda entrega |
 
 <br><br>
 
@@ -166,22 +166,3 @@ Exemplo de Organização de Issues
 <br><br>
 
 Após completar a entrega 2, o projeto estará pronto e publicado no GitHub Pages, com todos os requisitos implementados e documentados. A aplicação final incluirá uma interface completa e responsiva, filtros para análise de dados de gastos públicos, visualizações interativas e uma opção para exportação de dados.
-<br>
-<br>
-
-### Resumo
-<br>
-
-- Backlog: Todas as tarefas de ambas as sprints.
-  <br>
-- Entrega 1: Tarefas para a entrega de documentação e estrutura inicial, tarefas para a prévia de implementação e desenvolvimento técnico.
-  <br>
-- Entrega 2: Protótipo funcional do site, com todos os requisitos sendo cumpridos 
-<br><br>
-
-Cerimônias do Scrum
-
-<br>
-
-Sprint Planning: Antes de iniciar cada sprint, o time se reúne para revisar o backlog e definir quais tarefas serão priorizadas e incluídas na sprint.
-
