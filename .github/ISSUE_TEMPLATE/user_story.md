@@ -1,22 +1,20 @@
 ---
-name: User Story
-about: Use este template para descrever uma nova história de usuário.
-title: "[USER STORY]"
-labels: user story
-assignees: ""
+name: Template de história do usuário
+about: Este template fornece uma estrutura básica para histórias de usuário.
 ---
 
-**Título da História de Usuário**
-Como um [tipo de usuário], eu quero [o que o usuário deseja], para que [o benefício ou resultado esperado].
+# História do usuário
+Como ..., eu quero ..., para que eu possa ...
 
-**Critérios de Aceitação**
+*Idealmente, isso está no título da issue, mas, se não estiver, você pode colocá-lo aqui. Se estiver, delete esta seção.*
 
-- [Critério 1: O que deve ser verdadeiro quando a história for completada.]
-- [Critério 2: Outro critério para validar a conclusão da história.]
-- [Critério 3: Continue listando critérios conforme necessário.]
+# Critérios de aceitação
 
-**Notas Adicionais**
-Adicione qualquer nota ou consideração adicional que possa ajudar na implementação desta história de usuário.
+- [ ] Isso é algo que pode ser verificado para mostrar que esta história de usuário foi satisfeita.
 
-**Relação com a Sprint**
-Indique se esta história está relacionada a alguma Sprint específica.
+# Checklist de Pronto para a Sprint
+1. - [ ] Critérios de aceitação definidos
+2. - [ ] Equipe entende os critérios de aceitação
+3. - [ ] Equipe definiu a solução / etapas para satisfazer os critérios de aceitação
+4. - [ ] Critérios de aceitação são verificáveis / testáveis
+5. - [ ] Dependências externas / de terceiros identificadas
