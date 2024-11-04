@@ -1,30 +1,36 @@
 ---
-name: Bug Report
-about: Use este template para relatar um bug.
-title: "[BUG]"
-labels: bug
-assignees: ""
+name: Bug
+about: Template para relatar e documentar bugs
 ---
 
-**Descrição do Bug**
-Uma descrição clara e concisa do que é o bug.
+# Bug
 
-**Reproduzir**
-Etapas para reproduzir o bug:
+**Descrição**: [Descrição breve do problema]
 
-1. Vá para '...'
-2. Clique em '....'
-3. Role para baixo até '....'
-4. Veja o erro
+### Passos para Reproduzir
 
-**Comportamento Esperado**
-Uma descrição clara e concisa do que você esperava que acontecesse.
+1. Passo 1
+2. Passo 2
+3. Passo 3
 
-**Capturas de Tela**
-Se aplicável, adicione capturas de tela para ajudar a explicar seu problema.
+### Resultado Esperado
 
-**Contexto Adicional**
-Adicione qualquer outro contexto sobre o problema aqui.
+- [Descreva o resultado esperado]
 
-**Relação com a Sprint**
-Indique se este bug está relacionado a alguma Sprint específica.
+### Resultado Atual
+
+- [Descreva o que realmente aconteceu]
+
+### Informações Adicionais
+
+- **Sistema Operacional**: [Ex: iOS, Android, Windows]
+- **Versão do Sistema**: [Versão do OS]
+- **Navegador / Versão do App**: [Nome e versão do navegador ou app]
+
+### Critérios de Aceitação
+
+- [ ] O problema está corrigido e não ocorre mais nos cenários descritos.
+
+### Notas
+
+- Outros detalhes ou logs de erro, se aplicável.
