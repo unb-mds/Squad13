@@ -30,7 +30,7 @@ Estes requisitos garantem a qualidade do site, incluindo performance e usabilida
 - Interface intuitiva e fácil de entender para diferentes tipos de usuário;
 - Manter consistência visual e de navegação em todas as páginas.
 ### - Acessibilidade
-- Incluir testo alternativo para imagens e descrição para gráficos e tabelas;
+- Incluir texto alternativo para imagens e descrição para gráficos e tabelas;
 - Incluir acessibilidade para deficientes visuais.
 ### - Compatibilidade
 - Suportar os principais navegadores(Chrome, Firefox, Safari, Edge).
@@ -61,10 +61,3 @@ Para organização do trabalho em equipe e o desenvolvimento colaborativo.
 - Incluir um arquivo README.md completo no repositório, com uma descrição do projeto, requisitos, instruções de instalação e execução.
 ### - Organização 
 - Fazer uso do scrum possuindo uma metodologia ágil para estabelecer processos, reuniões, papéis e práticas para coordenar o desenvolvimento do projeto de forma interativa e incremental.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## Histórico de versões
-
-| Versão |    Data    | Descrição                                      | Autor                                               | Revisão                                                      |
-| :----: | :--------: | ---------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
-| `1.0`  | 01/11/2024 | Criação dos requisitos do trabalho | [Julia Gabriela](https://github.com/JuliaGabP) ||
