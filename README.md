@@ -33,6 +33,24 @@ O repositório está organizado da seguinte maneira:
 - **/src** - Código fonte do site.
 - **/assets** - Recursos estáticos, como imagens, arquivos CSS.
 
+## 👨‍💻 Instalação e uso
+Comandos básicos necessários:
+```
+    git clone
+    git cd
+    git pull
+    
+```
+
+Primeiro, use o comando `git clone https://github.com/unb-mds/Squad13` para conseguir clonar esse repositório em sua máquina.
+
+Depois, use o comando `cd Squad13` para acessar o diretório principal do repositório.
+
+Caso haja atualizações e já tenha clonado o repositório na máquina, será necessário utilizar o comando `git pull` no diretório principal para atualizar o repositório local.
+
+Para Acessar o site localmente será preciso executar o arquivo app.py com o comando no terminal `python3 app.py`. Após a execução do arquivo, será gerado um link http://localhost, basta apertar a tecla ctrl e clicar com o mouse esquerdo no link, ou colar o link no navegador para acessar o site diretamente de sua máquina.
+
+
 ## 📈 Dados Utilizados
 Os dados de gastos públicos do DF foram coletados a partir de bases de dados oficiais disponíveis publicamente, como portais de transparência. Durante o projeto, os dados serão filtrados, categorizados e formatados para otimizar a visualização e análise.
 
@@ -46,4 +64,4 @@ Caso tenha dúvidas ou sugestões, entre em contato com um dos colaboradores.
 
 | Versão |    Data    | Descrição                                      | Autor                                               | Revisão                                                      |
 | :----: | :--------: | ---------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
-| `1.0`  | 30/10/2024 | Estruturação do README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) ||
+| `1.0`  | 30/10/2024 | Estruturação do README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) | [Lucas Mendonça](https://github.com/lucasarruda9) |
