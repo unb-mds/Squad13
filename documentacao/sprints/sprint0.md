@@ -4,7 +4,7 @@
 
 ## 🎯 **1. Objetivo da Sprint**
 
-A **Sprint 0** marca o início do desenvolvimento do projeto e consiste em uma sprint de **planejamento e estruturação** com duração de uma semana. Esta etapa é essencial para construir uma base sólida para o projeto e alinhar as expectativas com as partes interessadas.
+A **Sprint 0** marca o início do desenvolvimento do projeto e consiste em uma sprint de **planejamento e estruturação**, com duração de uma semana. Esta etapa é essencial para construir uma base sólida para o projeto e alinhar as expectativas com as partes interessadas.
 
 **Objetivos principais da Sprint 0**:
 - **Definir o escopo e os requisitos iniciais** do projeto.
