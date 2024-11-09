@@ -11,6 +11,7 @@ A **Sprint 0** marca o início do desenvolvimento do projeto e consiste em uma s
 - **Configurar o ambiente de desenvolvimento** e selecionar as tecnologias principais.
 - **Criar uma estrutura de backlog** do produto e organizar as sprints futuras.
 - **Estabelecer papéis e cerimônias do Scrum**, garantindo organização e preparação para o desenvolvimento contínuo.
+- **Realizar Matriz de Competências**, localizando as maiores dificuldades da equipe em relação aos conteúdos.
 
 ---
 
@@ -95,6 +96,7 @@ Foram identificados possíveis riscos para o projeto e estratégias de mitigaç�
 ## 🔜 **8. Próximos Passos**
 
 Para a **Sprint 1**, os próximos passos focarão nos requisitos **R3** e **R4**, detalhados abaixo:
+- **Matriz de competências**: prevista para sprint 0, porém não realizada.
 
 - **Requisito R3: Especificar a Arquitetura Básica do Sistema**
   - **Objetivo**: Documentar a arquitetura inicial, detalhando a estrutura do front-end e back-end, além da integração entre esses componentes.
