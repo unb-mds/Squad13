@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Detalhes dos Gastos Públicos</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Despesa</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>R$ {{ item.expense }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

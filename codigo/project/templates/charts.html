@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Visualização de Gastos Públicos</h2>
+<div id="plotly-chart"></div>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+    // Certifique-se de que o JSON esteja formatado corretamente
+    var plotlyData = JSON.parse('{{ graphJSON | safe }}');
+    Plotly.newPlot('plotly-chart', plotlyData.data, plotlyData.layout);
+</script>
+{% endblock %}
