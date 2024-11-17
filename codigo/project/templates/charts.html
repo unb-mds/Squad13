@@ -2,12 +2,49 @@
 
 {% block content %}
 <h2>Visualização de Gastos Públicos</h2>
-<div id="plotly-chart"></div>
+
+<!-- Caixa expansível (dropdown) -->
+<div class="dropdown">
+    <button class="dropdown-btn">Período</button>
+    <div class="dropdown-content">
+        <a href="#" onclick="atualizarGrafico('diarios'); return false;">Diário</a>
+        <a href="#" onclick="atualizarGrafico('semanais'); return false;">Semanal</a>
+        <a href="#" onclick="atualizarGrafico('mensais'); return false;">Mensal</a>
+    </div>
+</div>
+
+<!-- Div onde o gráfico será exibido -->
+<div id="grafico-plotly"></div>
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script>
-    // Certifique-se de que o JSON esteja formatado corretamente
-    var plotlyData = JSON.parse('{{ graphJSON | safe }}');
-    Plotly.newPlot('plotly-chart', plotlyData.data, plotlyData.layout);
+    // Dados do gráfico gerado pelo backend Flask
+    var dadosPlotly = JSON.parse('{{ graphJSON | safe }}');
+
+    // Função para atualizar o gráfico com base no botão clicado
+    function atualizarGrafico(tipoVisualizacao) {
+        var labels, valores;
+        if (tipoVisualizacao === 'diarios') {
+            labels = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'];
+            valores = [30, 45, 20, 50, 65, 40, 70]; 
+        } else if (tipoVisualizacao === 'semanais') {
+            labels = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'];
+            valores = [200, 250, 300, 400]; 
+        } else if (tipoVisualizacao === 'mensais') {
+            labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'];
+            valores = [200, 300, 400, 500, 600]; 
+        }
+
+        var dadosAtualizados = [{
+            x: labels,
+            y: valores,
+            type: 'bar'
+        }];
+
+        Plotly.newPlot('grafico-plotly', dadosAtualizados, { title: `Gastos ${tipoVisualizacao}` });
+    }
+
+    atualizarGrafico('mensais');
 </script>
+
 {% endblock %}
