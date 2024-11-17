@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gastos Públicos DF</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="filename=image/favicon-32x32.png">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/">Introdução</a>
-            <a href="/charts">Gráficos</a>
-            <a href="/tables">Tabelas</a>
-        </nav>
+        <h1>Gastos Públicos - DF</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/charts">Gráfico</a></li>
+            <li><a href="/tables">Tabela</a></li>
+        </ul>
+    </nav>
     </header>
     <main>
         {% block content %}{% endblock %}

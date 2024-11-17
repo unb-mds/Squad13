@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #005200;
+    color: white; 
+    font-family: "Times New Roman", serif;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #021964;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Times New Roman", serif;
+    padding: 10px 20px;
+}
+nav ul li a:hover {
+    background-color: #323285; 
+    border-radius: 5px;
+}
+
+main {
+    padding: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+th {
+    background-color: #191970;
+    color: white;
+}
+
+footer {
+    background-color: #00063a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+body.index-page {
+    background-image: url('/static/images/fundo.jpg'); /* Caminho para a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-size: cover;        /* Faz com que a imagem cubra toda a tela */
+    background-attachment: fixed; /* Faz o fundo permanecer fixo ao rolar a página */
+    background-position: center;  /* Centraliza a imagem */
+    color: black;                 /* Torna o texto legível (opcional) */
+    font-family: "Times New Roman", serif;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido */
+    padding: 20px;
+    border-radius: 10px;                  /* Arredonda as bordas */
+    max-width: 1200px;                     /* Limita a largura do conteúdo */
+    margin: 100px auto;                   /* Centraliza o conteúdo na página */
+    text-align: left;                   /* Centraliza o texto */
+    color: black;                         /* Texto preto */
+}
