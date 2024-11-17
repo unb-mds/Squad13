@@ -7,7 +7,7 @@
 <div class="dropdown">
     <button class="dropdown-btn">Período</button>
     <div class="dropdown-content">
-        <a href="#" onclick="atualizarGrafico('diarios'); return false;">Diário</a>
+        <a href="#" onclick="atualizarGrafico('diários'); return false;">Diário</a>
         <a href="#" onclick="atualizarGrafico('semanais'); return false;">Semanal</a>
         <a href="#" onclick="atualizarGrafico('mensais'); return false;">Mensal</a>
     </div>
@@ -24,7 +24,7 @@
     // Função para atualizar o gráfico com base no botão clicado
     function atualizarGrafico(tipoVisualizacao) {
         var labels, valores;
-        if (tipoVisualizacao === 'diarios') {
+        if (tipoVisualizacao === 'diários') {
             labels = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'];
             valores = [30, 45, 20, 50, 65, 40, 70]; 
         } else if (tipoVisualizacao === 'semanais') {
