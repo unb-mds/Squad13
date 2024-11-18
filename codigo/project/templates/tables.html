@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Detalhes dos Gastos Públicos</h2>
+
+<!-- Formulário de pesquisa -->
+<form method="get" action="{{ url_for('tables') }}">
+    <input type="text" name="search" placeholder="Pesquisar por nome..." value="{{ search_query or '' }}">
+    <button type="submit">Pesquisar</button>
+</form>
+
+<!-- Tabela -->
+<table>
+    <thead>
+        <tr>
+            <th>
+                Nome
+                <!-- Link para ordenar por Nome -->
+                <a href="{{ url_for('tables', sort='name', sort_order='asc' if sort_by != 'name' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: inherit;">
+                    
+                        {% if sort_order == 'asc' %}
+                            <span>^</span>  <!-- Seta para cima -->
+                        {% else %}
+                            <span>v</span>  <!-- Seta para baixo -->
+                        {% endif %}
+                
+                </a>
+            </th>
+            <th>
+                Despesa
+                <!-- Link para ordenar por Despesa -->
+                <a href="{{ url_for('tables', sort='expense', sort_order='asc' if sort_by != 'expense' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: inherit;">
+                    
+                        {% if sort_order == 'asc' %}
+                            <span>^</span>  <!-- Seta para cima -->
+                        {% else %}
+                            <span>v</span>  <!-- Seta para baixo -->
+                        {% endif %}
+                   
+                </a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>R$ {{ item.expense }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% if data %}
+    <p>Exibindo {{ data|length }} resultado(s).</p>
+{% else %}
+    <p>Nenhum resultado encontrado.</p>
+{% endif %}
+
+{% endblock %}
+
+
