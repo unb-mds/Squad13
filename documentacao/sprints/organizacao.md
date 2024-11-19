@@ -23,3 +23,10 @@
 - Documentação da Sprint 1 - Gabriel Lopes Amorim; Lucas Mendonça Arruda;
 - Documentação das atas de reunião - Gabriel da Cunha Barbaceli;
 - Modelo base do site - Artur Mendonça Arruda; Julia Gabriela Cunha Paulino
+
+## SPRINT 3
+- Documentação da Sprint 2 - Artur Mendonça Arruda; Lucas Mendonça Arruda;
+- Documentação das atas de reunião - João Pedro Costa;
+- Personalização do front com Figma - Gabriel da Cunha Barbaceli; Gabriel Lopes Amorim; Julia Gabriela Cunha Paulino;
+- Criação das issues da semana - João Pedro Costa;
+- Documentação das funções na sprint - Julia Gabriela Cunha Paulino;
