@@ -22,7 +22,8 @@
 ## SPRINT 2
 - Documentação da Sprint 1 - Gabriel Lopes Amorim; Lucas Mendonça Arruda;
 - Documentação das atas de reunião - Gabriel da Cunha Barbaceli;
-- Modelo base do site - Artur Mendonça Arruda; Julia Gabriela Cunha Paulino
+- Modelo base do site - Artur Mendonça Arruda; Julia Gabriela Cunha Paulino;
+- Estudar API`s do governo - Gabriel da Cunha Barbaceli; João Pedro Costa;
 
 ## SPRINT 3
 - Documentação da Sprint 2 - Artur Mendonça Arruda; Lucas Mendonça Arruda;
