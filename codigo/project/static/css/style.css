@@ -1,16 +1,26 @@
 body {
+    background-color: #f3f7fa;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #005200;
-    color: white; 
-    font-family: "Times New Roman", serif;
-    padding: 20px;
-    text-align: center;
+    background-color: white; /* Fundo branco */
+    color: black; /* Cor do texto */
+    font-family: "Times New Roman", serif; /* Fonte do texto */
+    padding: 20px; /* Espaçamento interno */
+    display: flex; /* Torna o cabeçalho um contêiner flex */
+    align-items: center; /* Alinha a imagem e o texto verticalmente ao centro */
 }
+
+/* Estilo da imagem no cabeçalho */
+.header-logo {
+    width: 75px; /* Define largura fixa para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
 
 nav {
     background-color: #021964;
@@ -69,35 +79,23 @@ footer {
     width: 100%;
 }
 
-body.index-page {
-    background-image: url('/static/images/fundo.jpg'); /* Caminho para a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
-    background-size: cover;        /* Faz com que a imagem cubra toda a tela */
-    background-attachment: fixed; /* Faz o fundo permanecer fixo ao rolar a página */
-    background-position: center;  /* Centraliza a imagem */
-    color: black;                 /* Torna o texto legível (opcional) */
-    font-family: "Times New Roman", serif;
-}
 
 .content {
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido */
+    background-color: white; /* Fundo branco */
     padding: 20px;
-    border-radius: 10px;                  /* Arredonda as bordas */
-    max-width: 1200px;                     /* Limita a largura do conteúdo */
-    margin: 100px auto;                   /* Centraliza o conteúdo na página */
-    text-align: left;                   /* Centraliza o texto */
-    color: black;                         /* Texto preto */
+    border-radius: 10px;  /* Arredonda as bordas */
+    max-width: 1200px;    /* Limita a largura do conteúdo */
+    margin: 100px auto;   /* Centraliza o conteúdo na página */
+    text-align: left;     /* Centraliza o texto */
+    color: black;       /* Texto preto */
 }
-
-
-
 
 form[action="{{ url_for('tables') }}"] {
     margin-bottom: 2rem;
 }
 
 button {
-    background-color: #0073e6;
+    background-color: #191970;
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -109,7 +107,7 @@ button {
 }
 
 button:hover {
-    background-color: #005bb5;
+    background-color: #191970;
     transform: scale(1.05);
 }
 
@@ -118,7 +116,7 @@ button:focus {
 }
 
 form button {
-    background-color: #0073e6;
+    background-color: #191970;
     color: white;
     padding: 0.6rem 1rem;
     font-size: 1rem;
@@ -139,8 +137,8 @@ form button:hover {
     display: inline-block;
 }
 
-.dropdown-btn {
-    background-color: #0073e6;
+.dropdown-btn {/* Botão período */
+    background-color: #191970;
     color: white;
     padding: 10px 20px;
     font-size: 16px;
