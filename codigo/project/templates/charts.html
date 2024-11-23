@@ -1,38 +1,72 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<h2>Visualização de Gastos Públicos</h2>
+{% block title %}Análise de Gráficos{% endblock %}
 
-<!-- Caixa expansível (dropdown) -->
-<div class="dropdown">
-    <button class="dropdown-btn">Período</button>
-    <div class="dropdown-content">
-        <a href="#" onclick="atualizarGrafico('diários'); return false;">Diário</a>
-        <a href="#" onclick="atualizarGrafico('semanais'); return false;">Semanal</a>
-        <a href="#" onclick="atualizarGrafico('mensais'); return false;">Mensal</a>
-    </div>
+{% block content %}
+<!-- Barra de navegação -->
+<div class="barra-navegacao">
+    <a href="{{ url_for('charts') }}" class="nav-link active">Gráficos</a>
+    <a href="{{ url_for('tables') }}" class="nav-link">Tabelas</a>
 </div>
 
-<!-- Div onde o gráfico será exibido -->
-<div id="grafico-plotly"></div>
+<!-- Conteúdo principal -->
+<main>
+    <div class="content">
+        <h2>Monitoramento de Gastos Públicos - DF</h2>
 
+        <!-- Menu dropdown para escolha -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Escolher</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="atualizarGrafico('Despesas'); return false;">Despesas</a>
+                <a href="#" onclick="atualizarGrafico('Bolsa Família'); return false;">Bolsa Família</a>
+                <a href="#" onclick="atualizarGrafico('Notas Fiscais'); return false;">Notas Fiscais</a>
+                <a href="#" onclick="atualizarGrafico('Licitações'); return false;">Licitações</a>
+            </div>
+        </div>
+
+        <!-- Div onde o gráfico será exibido -->
+        <div id="grafico-plotly"></div>
+    </div>
+</main>
+
+<!-- Scripts para os gráficos -->
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script>
-    // Dados do gráfico gerado pelo backend Flask
-    var dadosPlotly = JSON.parse('{{ graphJSON | safe }}');
+    // Dados iniciais do gráfico
+    var dadosPlotly = {
+        x: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+        y: [200, 300, 400, 500, 600],
+        type: 'bar'
+    };
 
-    // Função para atualizar o gráfico com base no botão clicado
-    function atualizarGrafico(tipoVisualizacao) {
-        var labels, valores;
-        if (tipoVisualizacao === 'diários') {
-            labels = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'];
-            valores = [30, 45, 20, 50, 65, 40, 70]; 
-        } else if (tipoVisualizacao === 'semanais') {
-            labels = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'];
-            valores = [200, 250, 300, 400]; 
-        } else if (tipoVisualizacao === 'mensais') {
+    // Configurações do gráfico inicial
+    var layout = {
+        title: 'Gastos mensais'
+    };
+
+    // Renderizar gráfico inicial
+    Plotly.newPlot('grafico-plotly', [dadosPlotly], layout);
+
+    // Atualizar gráfico com base na seleção
+    function atualizarGrafico(tipo) {
+        let labels, valores, titulo;
+        if (tipo === 'Despesas') {
             labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'];
-            valores = [200, 300, 400, 500, 600]; 
+            valores = [200, 300, 400, 500, 600];
+            titulo = 'Gastos com Despesas';
+        } else if (tipo === 'Bolsa Família') {
+            labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'];
+            valores = [150, 250, 350, 450, 550];
+            titulo = 'Gastos com Bolsa Família';
+        } else if (tipo === 'Notas Fiscais') {
+            labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'];
+            valores = [100, 200, 300, 400, 500];
+            titulo = 'Gastos com Notas Fiscais';
+        } else if (tipo === 'Licitações') {
+            labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'];
+            valores = [250, 350, 450, 550, 650];
+            titulo = 'Gastos com Licitações';
         }
 
         var dadosAtualizados = [{
@@ -41,10 +75,7 @@
             type: 'bar'
         }];
 
-        Plotly.newPlot('grafico-plotly', dadosAtualizados, { title: `Gastos ${tipoVisualizacao}` });
+        Plotly.newPlot('grafico-plotly', dadosAtualizados, { title: titulo });
     }
-
-    atualizarGrafico('mensais');
 </script>
-
 {% endblock %}

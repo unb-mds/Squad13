@@ -1,62 +1,69 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Detalhes dos Gastos Públicos</h2>
+<!-- Barra de navegação -->
+<div class="barra-navegacao">
+    <a href="{{ url_for('charts') }}" class="nav-link">Gráficos</a>
+    <a href="{{ url_for('tables') }}" class="nav-link active">Tabelas</a>
+</div>
 
-<!-- Formulário de pesquisa -->
-<form method="get" action="{{ url_for('tables') }}">
-    <input type="text" name="search" placeholder="Pesquisar por nome..." value="{{ search_query or '' }}">
-    <button type="submit">Pesquisar</button>
-</form>
+<!-- Conteúdo principal -->
+<main>
+    <div class="content">
+        <h2>Detalhes dos Gastos Públicos</h2>
 
-<!-- Tabela -->
-<table>
-    <thead>
-        <tr>
-            <th>
-                Nome
-                <!-- Link para ordenar por Nome -->
-                <a href="{{ url_for('tables', sort='name', sort_order='asc' if sort_by != 'name' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: inherit;">
-                    
-                        {% if sort_order == 'asc' %}
-                            <span>^</span>  <!-- Seta para cima -->
-                        {% else %}
-                            <span>v</span>  <!-- Seta para baixo -->
-                        {% endif %}
-                
-                </a>
-            </th>
-            <th>
-                Despesa
-                <!-- Link para ordenar por Despesa -->
-                <a href="{{ url_for('tables', sort='expense', sort_order='asc' if sort_by != 'expense' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: inherit;">
-                    
-                        {% if sort_order == 'asc' %}
-                            <span>^</span>  <!-- Seta para cima -->
-                        {% else %}
-                            <span>v</span>  <!-- Seta para baixo -->
-                        {% endif %}
-                   
-                </a>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for item in data %}
-        <tr>
-            <td>{{ item.name }}</td>
-            <td>R$ {{ item.expense }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+        <!-- Formulário de pesquisa -->
+        <form method="get" action="{{ url_for('tables') }}" style="margin-bottom: 20px;">
+            <input type="text" name="search" placeholder="Pesquisar por nome..." value="{{ search_query or '' }}" style="padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; width: 250px;">
+            <button type="submit" style="padding: 8px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Pesquisar</button>
+        </form>
 
-{% if data %}
-    <p>Exibindo {{ data|length }} resultado(s).</p>
-{% else %}
-    <p>Nenhum resultado encontrado.</p>
-{% endif %}
+        <!-- Tabela -->
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
+                        Nome
+                        <a href="{{ url_for('tables', sort='name', sort_order='asc' if sort_by != 'name' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: #0056b3;">
+                            {% if sort_by == 'name' %}
+                                {% if sort_order == 'asc' %}
+                                    <span>^</span>
+                                {% else %}
+                                    <span>v</span>
+                                {% endif %}
+                            {% endif %}
+                        </a>
+                    </th>
+                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
+                        Despesa
+                        <a href="{{ url_for('tables', sort='expense', sort_order='asc' if sort_by != 'expense' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: #0056b3;">
+                            {% if sort_by == 'expense' %}
+                                {% if sort_order == 'asc' %}
+                                    <span>^</span>
+                                {% else %}
+                                    <span>v</span>
+                                {% endif %}
+                            {% endif %}
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">{{ item.name }}</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ {{ item.expense }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
+        <!-- Exibição de resultados -->
+        {% if data %}
+            <p style="margin-top: 20px;">Exibindo {{ data|length }} resultado(s).</p>
+        {% else %}
+            <p style="margin-top: 20px;">Nenhum resultado encontrado.</p>
+        {% endif %}
+    </div>
+</main>
 {% endblock %}
-
-

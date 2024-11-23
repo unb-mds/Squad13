@@ -1,3 +1,4 @@
+/* Estilos gerais */
 body {
     background-color: #f3f7fa;
     font-family: Arial, sans-serif;
@@ -5,160 +6,230 @@ body {
     padding: 0;
 }
 
+/* Estilo do cabeçalho */
 header {
-    background-color: white; /* Fundo branco */
-    color: black; /* Cor do texto */
-    font-family: "Times New Roman", serif; /* Fonte do texto */
-    padding: 20px; /* Espaçamento interno */
-    display: flex; /* Torna o cabeçalho um contêiner flex */
-    align-items: center; /* Alinha a imagem e o texto verticalmente ao centro */
+    background-color: white;
+    border-bottom: 2px solid #dcdcdc;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
 }
 
-/* Estilo da imagem no cabeçalho */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
 .header-logo {
-    width: 75px; /* Define largura fixa para a imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 10px; /* Espaço entre a imagem e o texto */
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
 }
 
-
-nav {
-    background-color: #021964;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
+h1 {
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
+    color: #333;
 }
-nav ul li {
-    display: inline-block;
-    margin-right: 15px;
+
+/* Botões do cabeçalho */
+.header-buttons {
+    display: flex;
+    gap: 15px;
 }
-nav ul li a {
+
+.btn-header {
+    background-color: #0056b3;
     color: white;
     text-decoration: none;
-    font-family: "Times New Roman", serif;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    transition: background-color 0.3s ease;
 }
-nav ul li a:hover {
-    background-color: #323285; 
+
+.btn-header.active {
+    background-color: transparent;
+    color: #0056b3;
+    font-weight: bold;
+    cursor: default;
+    border: 2px solid #0056b3;
+}
+
+.btn-header:hover:not(.active) {
+    background-color: #003d82;
+}
+
+/* Estilo principal */
+main {
+    padding: 20px;
+    margin-bottom: 80px;
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #333;
+}
+
+/* Barra de navegação azul */
+.barra-navegacao {
+    background: linear-gradient(90deg, #003d82, #0056b3);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #002d63;
+    transform: scale(1.05);
+}
+
+.nav-link.active {
+    background-color: #0056b3;
+    color: white;
+    font-weight: bold;
+    cursor: default;
+    border: 2px solid #003d82;
     border-radius: 5px;
 }
 
-main {
-    padding: 2rem;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-}
-
-th {
-    background-color: #191970;
-    color: white;
-}
-
+/* Estilo do rodapé */
 footer {
-    background-color: #00063a;
+    background-color: #021964;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-top: 2px solid #003d82;
 }
 
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 
-.content {
-    background-color: white; /* Fundo branco */
+.footer-logo {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}
+
+/* Estilos do conteúdo */
+.titulo-principal {
+    font-size: 2.5rem;
+    color: #003d82;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.descricao-projeto, .objetivos, .tecnologias, .colaboradores {
+    background-color: #f0f7ff;
     padding: 20px;
-    border-radius: 10px;  /* Arredonda as bordas */
-    max-width: 1200px;    /* Limita a largura do conteúdo */
-    margin: 100px auto;   /* Centraliza o conteúdo na página */
-    text-align: left;     /* Centraliza o texto */
-    color: black;       /* Texto preto */
+    border-radius: 8px;
+    border: 1px solid #d1e3f8;
 }
 
-form[action="{{ url_for('tables') }}"] {
-    margin-bottom: 2rem;
-}
-
-button {
-    background-color: #191970;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-right: 1rem;
-}
-
-button:hover {
-    background-color: #191970;
-    transform: scale(1.05);
-}
-
-button:focus {
-    outline: none;
-}
-
-form button {
-    background-color: #191970;
-    color: white;
-    padding: 0.6rem 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 1rem;
-}
-
-form button:hover {
-    background-color: #005bb5;
-    transform: scale(1.05);
-}
-
-/* Estilos para a caixinha expansível */
+/* Dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
+    margin: 20px 0;
 }
 
-.dropdown-btn {/* Botão período */
-    background-color: #191970;
+.dropdown-btn {
+    background-color: #0056b3;
     color: white;
-    padding: 10px 20px;
-    font-size: 16px;
     border: none;
-    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .dropdown-btn:hover {
-    background-color: #005bb5;
+    background-color: #003d82;
+    transform: scale(1.05);
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .dropdown-content a {
@@ -166,12 +237,9 @@ form button:hover {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+    background-color: #ddd;
 }
