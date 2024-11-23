@@ -1,30 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gastos Públicos DF</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="filename=image/favicon-32x32.png">
-</head>
-<body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Gastos Públicos DF{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Gastos Públicos - DF</h1>
+      <nav class="header-container">
+        <div class="logo-container">
+          <img
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="Logo"
+            class="header-logo"
+          />
+          <h1>Monitoramento De Gastos Públicos - DF</h1>
+        </div>
+        <div class="header-buttons">
+          <!-- Botões de navegação, com classe 'active' para a página atual -->
+          {% if request.path == '/' %}
+          <a class="btn-header active">Início</a>
+          <a href="/charts" class="btn-header">Análise de Gráficos</a>
+          {% elif request.path == '/charts' or request.path == '/tables' %}
+          <a href="/" class="btn-header">Início</a>
+          <a class="btn-header active"
+            >{% if request.path == '/charts' %}Análise de Gráficos {%elif
+            request.path == '/tables' %}Análise de Gastos{% endif %}</a
+          >
+          {% endif %}
+        </div>
+      </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="/">Início</a></li>
-            <li><a href="/charts">Gráfico</a></li>
-            <li><a href="/tables">Tabela</a></li>
-        </ul>
-    </nav>
-    </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    <!-- Conteúdo da página -->
+    <main>{% block content %}{% endblock %}</main>
+
+    <!-- Rodapé global, presente em todas as páginas -->
     <footer>
-        <p>© 2024 Análise de Gastos Públicos DF</p>
+      <div class="footer-container">
+        <img
+          src="{{ url_for('static', filename='images/footer-logo.png') }}"
+          alt="Logo do rodapé"
+          class="footer-logo"
+        />
+        <p>
+          © 2024 Monitoramento de Gastos Públicos - Todos os direitos
+          reservados.
+        </p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

@@ -1,35 +1,61 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
+<div
+  class="content"
+  style="display: flex; flex-direction: column; justify-content: center"
+>
+  <h1 class="titulo-principal">
+    Bem-vindo ao Projeto de Análise de Gastos Públicos
+  </h1>
 
-{% block content %}
-<body class="index-page">
-    <!-- Conteúdo da página -->
-    <div class="content">
-        <h1>Bem-vindo ao Projeto de Análise de Gastos Públicos</h1>
-        <h1> Descrição do projeto</h1>
-        <p>
-            Este projeto consiste na criação de um site hospedado no GitHub Pages para a 
-            análise e visualização dos gastos públicos do Distrito Federal. O objetivo é
-            proporcionar uma plataforma acessível que permita aos cidadãos, estudantes e
-            profissionais entender e acompanhar a alocação de recursos públicos no DF, 
-            promovendo transparência e conscientização.
-        </p>
-        <h1> Objetivos</h1>
-        <p>1. Analisar e organizar dados públicos sobre os gastos do DF.</p>
-        <p>2. Visualizar dados de forma intuitiva para facilitar a compreensão.</p>
-        <p>3. Promover transparência ao permitir que os usuários acompanhem os gastos em diferentes setores, como saúde, educação e segurança.</p>
-        <p>4. Aplicar práticas de desenvolvimento colaborativo usando Git e GitHub, alinhadas às boas práticas discutidas em sala de aula.</p>
-        <h1> Tecnologias Utilizadas</h1>
-        <p>HTML, CSS: Para a construção do front-end.</p>
-        <p>Python: Para a construção do front-end.</p>
-        <p>GitHub: Para controle de versão e colaboração entre os membros do grupo.</p>
-        <p>GitHub Pages: Para hospedagem do site.</p>
-        <h1> Colaboradores</h1>
-        <p>Artur Mendonça Arruda</p>
-        <p>Gabriel da Cunha Barbaceli</p>
-        <p>Gabriel Lopes de Amorim</p>
-        <p>João Pedro Costa</p>
-        <p>Julia Gabriela Cunha Paulino</p>
-        <p>Lucas Mendonça Arruda</p>
-    </div>
-</body>
+  <section class="description-container">
+    <h2>Descrição do projeto</h2>
+    <p>
+      Este projeto consiste na criação de um site hospedado no GitHub Pages para
+      a análise e visualização dos gastos públicos do Distrito Federal. O
+      objetivo é proporcionar uma plataforma acessível que permita aos cidadãos,
+      estudantes e profissionais entender e acompanhar a alocação de recursos
+      públicos no DF, promovendo transparência e conscientização.
+    </p>
+  </section>
+
+  <section class="description-container">
+    <h2>Objetivos</h2>
+    <ol>
+      <li>Analisar e organizar dados públicos sobre os gastos do DF.</li>
+      <li>Visualizar dados de forma intuitiva para facilitar a compreensão.</li>
+      <li>
+        Promover transparência ao permitir que os usuários acompanhem os gastos
+        em diferentes setores, como saúde, educação e segurança.
+      </li>
+      <li>
+        Aplicar práticas de desenvolvimento colaborativo usando Git e GitHub,
+        alinhadas às boas práticas discutidas em sala de aula.
+      </li>
+    </ol>
+  </section>
+
+  <section class="description-container">
+    <h2>Tecnologias Utilizadas</h2>
+    <ul>
+      <li>HTML, CSS: Para a construção do front-end.</li>
+      <li>Python: Para a construção do back-end.</li>
+      <li>
+        GitHub: Para controle de versão e colaboração entre os membros do grupo.
+      </li>
+      <li>GitHub Pages: Para hospedagem do site.</li>
+    </ul>
+  </section>
+
+  <section class="description-container">
+    <h2>Colaboradores</h2>
+    <ul>
+      <li>Artur Mendonça Arruda</li>
+      <li>Gabriel da Cunha Barbaceli</li>
+      <li>Gabriel Lopes de Amorim</li>
+      <li>João Pedro Costa</li>
+      <li>Julia Gabriela Cunha Paulino</li>
+      <li>Lucas Mendonça Arruda</li>
+    </ul>
+  </section>
+</div>
 {% endblock %}
