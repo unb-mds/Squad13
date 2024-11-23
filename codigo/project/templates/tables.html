@@ -22,27 +22,34 @@
         <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
             <thead>
                 <tr>
+                    <!-- Coluna Nome com botão de ordenação -->
                     <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
                         Nome
                         <a href="{{ url_for('tables', sort='name', sort_order='asc' if sort_by != 'name' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: #0056b3;">
                             {% if sort_by == 'name' %}
                                 {% if sort_order == 'asc' %}
-                                    <span>^</span>
+                                    <span>🔼</span> <!-- Seta para cima -->
                                 {% else %}
-                                    <span>v</span>
+                                    <span>🔽</span> <!-- Seta para baixo -->
                                 {% endif %}
+                            {% else %}
+                                <span>⇵</span> <!-- Seta padrão -->
                             {% endif %}
                         </a>
                     </th>
+
+                    <!-- Coluna Despesa com botão de ordenação -->
                     <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
                         Despesa
                         <a href="{{ url_for('tables', sort='expense', sort_order='asc' if sort_by != 'expense' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: #0056b3;">
                             {% if sort_by == 'expense' %}
                                 {% if sort_order == 'asc' %}
-                                    <span>^</span>
+                                    <span>🔼</span> <!-- Seta para cima -->
                                 {% else %}
-                                    <span>v</span>
+                                    <span>🔽</span> <!-- Seta para baixo -->
                                 {% endif %}
+                            {% else %}
+                                <span>⇵</span> <!-- Seta padrão -->
                             {% endif %}
                         </a>
                     </th>
