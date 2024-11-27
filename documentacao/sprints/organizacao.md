@@ -31,3 +31,13 @@
 - Personalização do front com Figma - Gabriel da Cunha Barbaceli; Gabriel Lopes Amorim; Julia Gabriela Cunha Paulino;
 - Criação das issues da semana - João Pedro Costa;
 - Documentação das funções na sprint - Julia Gabriela Cunha Paulino;
+
+## SPRINT 4
+- Documentação da Sprint 3 - Gabriel Lopes Amorim; Lucas Mendonça Arruda;
+- Documentação das atas de reunião - Gabriel da Cunha Barbaceli;
+- Publicação no GitHub Pages - Artur Mendonça Arruda; Julia Gabriela Cunha Paulino;
+- Criação das issues da semana - João Pedro Costa;
+- Documentação das funções na sprint - Julia Gabriela Cunha Paulino;
+- Release notes - Gabriel da Cunha Barbaceli; João Pedro Costa;
+- Criação de um design responsivo - Gabriel Lopes Amorim; Lucas Mendonça Arruda;
+  
