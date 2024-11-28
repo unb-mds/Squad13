@@ -294,7 +294,11 @@ ol li::marker {
 /* Dispositivos móveis em retrato */
 @media (max-width: 768px) {
   h1 {
-    font-size: 12px;
+    font-size: 18px;
+  }
+
+  .header-logo {
+    width: 40px;
   }
 
   .titulo-principal {
