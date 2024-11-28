@@ -30,7 +30,7 @@ Durante a Sprint 3, foram realizadas as seguintes atividades:
 
 ## 📝 **3. Requisitos Definidos e Cumpridos**
 
-Com o adiamento de diversos requisitos da sprint 2, foi decidido na Sprint 3 o foco na documentação e na personalização do front-end com Figma para garantir um bom andamento nas sprints futuras.
+Com o adiantamento de diversos requisitos da sprint 2, foi decidido na Sprint 3 o foco na documentação e na personalização do front-end com Figma para garantir um bom andamento nas sprints futuras.
 
 ---
 
@@ -73,6 +73,8 @@ Por outro lado, ao focar mais na codificação do que na documentação, os risc
 
 Para a **Sprint 4**, os principais objetivos são:
 
-1. **Requisito R11:** Implementar a Responsividade para garantir que o site tenha uma interface adaptável, oferecendo uma boa experiência de usuário em diferentes dispositivos. 
+1. **Criação da release note**  Documentar as principais alterações, funcionalidades implementadas, correções de bugs e melhorias realizadas durante a Sprint 4.
 
-2. **Requisito R14:** Publicar no Github Pages, uma plataforma gratuita que permite hospedar páginas estáticas diretamente de um repositório do GitHub.
+2. **Requisito R11:** Implementar a Responsividade para garantir que o site tenha uma interface adaptável, oferecendo uma boa experiência de usuário em diferentes dispositivos. 
+
+3. **Requisito R14:** Publicar no Github Pages, uma plataforma gratuita que permite hospedar páginas estáticas diretamente de um repositório do GitHub.
