@@ -291,3 +291,30 @@ ol li::marker {
   }
 }
 
+/* Dispositivos móveis em retrato */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 12px;
+  }
+
+  .titulo-principal {
+    font-size: 1.8rem;
+  }
+
+  .content {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .dropdown-btn {
+    padding: 8px 12px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
