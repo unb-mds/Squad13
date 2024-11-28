@@ -338,11 +338,11 @@ ol li::marker {
   }
 
   .nav-link {
-    font-size: 2px;
+    font-size: 13px;
   }
 
   footer p {
-    font-size: 18px;
+    font-size: 12px;
   }
 
 }
