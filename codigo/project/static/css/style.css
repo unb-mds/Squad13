@@ -250,3 +250,116 @@ ol li::marker {
 .dropdown-content a:hover {
   background-color: #ddd;
 }
+
+/* MEDIA QUERIES - Tornando o site responsivo */
+
+/* Tablets e dispositivos móveis em paisagem */
+@media (max-width: 1024px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-buttons {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .barra-navegacao {
+    flex-direction: row;  
+  }
+
+  .nav-link {
+    margin: 5px 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .titulo-principal {
+    font-size: 2rem;
+  }
+
+  .dropdown-btn {
+    width: auto;  /* Ajuste para o tamanho mais natural do botão */
+    padding: 6px 12px;  /* Diminuir um pouco o padding para não ficar grande */
+  }
+
+  /* Ajuste para remover o recuo das listas, deixando alinhado com o texto */
+  ul, ol {
+    padding-left: 1rem;  /* Ajusta o padding à esquerda para ficar igual ao texto normal */
+    margin-left: 0;
+  }
+}
+
+/* Dispositivos móveis em retrato */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .header-logo {
+    width: 40px;
+  }
+
+  .titulo-principal {
+    font-size: 1.8rem;
+  }
+
+  .content {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .dropdown-btn {
+    padding: 8px 12px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  /* Ajuste para remover o recuo das listas e alinhá-las com o texto */
+  ul, ol {
+    padding-left: 1rem;  /* Ajusta o padding a esquerda para ficar igual ao texto normal */
+    margin-left: 0;
+  }
+}
+
+/* Dispositivos móveis muito pequenos (como celulares antigos) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  .header-logo {
+    width: 35px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  /* Ajuste para remover o recuo das listas e alinhá-las com o texto */
+  ul, ol {
+    padding-left: 1rem;  /* Ajusta o padding a esquerda para ficar igual ao texto normal */
+    margin-left: 0;
+  }
+}
