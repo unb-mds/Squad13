@@ -250,3 +250,43 @@ ol li::marker {
 .dropdown-content a:hover {
   background-color: #ddd;
 }
+
+/* MEDIA QUERIES - Tornando o site responsivo */
+
+/* Tablets e dispositivos móveis em paisagem */
+@media (max-width: 1024px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-buttons {
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .barra-navegacao {
+    flex-direction: column;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .titulo-principal {
+    font-size: 4rem;
+  }
+
+  .dropdown-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
