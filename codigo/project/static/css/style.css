@@ -323,4 +323,18 @@ ol li::marker {
   }
 }
 
+/* Dispositivos móveis muito pequenos (como celulares antigos) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  .header-logo {
+    width: 35px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
 
