@@ -278,11 +278,11 @@ ol li::marker {
   }
 
   .content {
-    padding: 20px;
+    padding: 15px;
   }
 
   .titulo-principal {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   .dropdown-btn {
