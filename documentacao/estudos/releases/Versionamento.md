@@ -20,7 +20,7 @@ MAJOR.MINOR.PATCH
 - **MINOR**: Funcionalidades novas, mas compatíveis com versões anteriores (ex.: `1.1.0`).
 - **PATCH**: Correções de bugs ou pequenas melhorias, mantendo a compatibilidade com versões anteriores (ex.: `1.0.1`).
 
-Usar esse padrão ajuda os desenvolvedores e usuários a entender rapidamente a natureza das alterações e se a atualização é segura ou pode quebrar compatibilidade.
+Usar esse padrão ajuda os desenvolvedores e usuários a entender rapidamente a natureza das alterações e se a atualização é segura ou pode quebrar a compatibilidade.
 
 ## 3. Associação de Releases com Tags
 
