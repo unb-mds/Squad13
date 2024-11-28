@@ -262,7 +262,7 @@ ol li::marker {
 
   .header-buttons {
     justify-content: center;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .barra-navegacao {
@@ -270,7 +270,7 @@ ol li::marker {
   }
 
   .nav-link {
-    margin: 10px 0;
+    margin: 5px 0;
   }
 
   .footer-container {
