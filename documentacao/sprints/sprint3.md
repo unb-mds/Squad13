@@ -53,9 +53,9 @@ O ambiente de desenvolvimento foi mantido com foco na personalização do front-
 | R7  | Explorar Integração Front-end e back-end   | Alta 🔴       | Concluído     |
 | R8  | Implementar Rota Básica no Flask           | Alta 🔴       | Concluído     |
 | R9  | Criar Páginas de Visualização no Front-end | Alta 🔴       | Concluído     |
-| R10 | Conectar Front-end ao Back-end             | Alta 🔴       | Não iniciado  |
+| R10 | Conectar Front-end ao Back-end             | Alta 🔴       | Concluído     |
 | R11 | Implementar Design Responsivo Básico       | Alta 🔴       | Não iniciado  |
-| R12 | Adicionar Gráficos com Dados Estáticos     | Média 🟡      | Não iniciado  |
+| R12 | Adicionar Gráficos com Dados Estáticos     | Média 🟡      | Concluído     |
 | R13 | Documentar Instruções de Desenvolvimento   | Alta 🔴       | Não iniciado  |
 | R14 | Publicar no GitHub Pages                   | Alta 🔴       | Não iniciado  |
 
@@ -73,7 +73,7 @@ Por outro lado, ao focar mais na codificação do que na documentação, os risc
 
 Para a **Sprint 4**, os principais objetivos são:
 
-1. **Criação da release note**  Documentar as principais alterações, funcionalidades implementadas, correções de bugs e melhorias realizadas durante a Sprint 4.
+1. **Criação da release note:**  Documentar as principais alterações, funcionalidades implementadas, correções de bugs e melhorias realizadas durante a Sprint 4.
 
 2. **Requisito R11:** Implementar a Responsividade para garantir que o site tenha uma interface adaptável, oferecendo uma boa experiência de usuário em diferentes dispositivos. 
 
