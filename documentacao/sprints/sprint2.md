@@ -57,9 +57,9 @@ O ambiente de desenvolvimento foi mantido com foco na personalização do front-
 | R7  | Explorar Integração Front-end e back-end   | Alta 🔴       | Concluído     |
 | R8  | Implementar Rota Básica no Flask           | Alta 🔴       | Concluído     |
 | R9  | Criar Páginas de Visualização no Front-end | Alta 🔴       | Concluído     |
-| R10 | Conectar Front-end ao Back-end             | Alta 🔴       | Não iniciado  |
+| R10 | Conectar Front-end ao Back-end             | Alta 🔴       | Concluído     |
 | R11 | Implementar Design Responsivo Básico       | Alta 🔴       | Não iniciado  |
-| R12 | Adicionar Gráficos com Dados Estáticos     | Média 🟡      | Não iniciado  |
+| R12 | Adicionar Gráficos com Dados Estáticos     | Média 🟡      | Concluído     |
 | R13 | Documentar Instruções de Desenvolvimento   | Alta 🔴       | Não iniciado  |
 | R14 | Publicar no GitHub Pages                   | Alta 🔴       | Não iniciado  |
 
