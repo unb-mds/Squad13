@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gastos Públicos DF</title>
+    <link
+      rel="stylesheet"
+      href="/static/css/style.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="header-container">
+        <div class="logo-container">
+          <img
+            src="/static/images/logo.png"
+            alt="Logo"
+            class="header-logo"
+          />
+          <h1>Monitoramento De Gastos Públicos - DF</h1>
+        </div>
+        <div class="header-buttons">
+          <!-- Botões de navegação, com classe 'active' para a página atual -->
+          
+          <a class="btn-header active">Início</a>
+          <a href="/charts" class="btn-header">Análise de Gráficos</a>
+          
+        </div>
+      </nav>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <main>
+<!-- Barra de navegação -->
+<div class="barra-navegacao">
+    <a href="/charts" class="nav-link">Gráficos</a>
+    <a href="/tables" class="nav-link active">Tabelas</a>
+</div>
+
+<!-- Conteúdo principal -->
+<main>
+    <div class="content">
+        <h2>Detalhes dos Gastos Públicos</h2>
+
+        <!-- Formulário de pesquisa -->
+        <form method="get" action="/tables" style="margin-bottom: 20px;">
+            <input type="text" name="search" placeholder="Pesquisar por nome..." value="" style="padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; width: 250px;">
+            <button type="submit" style="padding: 8px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Pesquisar</button>
+        </form>
+
+        <!-- Tabela -->
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr>
+                    <!-- Coluna Nome com botão de ordenação -->
+                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
+                        Nome
+                        <a href="/tables?sort=name&amp;sort_order=asc" style="text-decoration: none; color: #0056b3;">
+                            
+                                <span>⇵</span> <!-- Seta padrão -->
+                            
+                        </a>
+                    </th>
+
+                    <!-- Coluna Despesa com botão de ordenação -->
+                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
+                        Despesa
+                        <a href="/tables?sort=expense&amp;sort_order=asc" style="text-decoration: none; color: #0056b3;">
+                            
+                                <span>⇵</span> <!-- Seta padrão -->
+                            
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
+        <!-- Exibição de resultados -->
+        
+            <p style="margin-top: 20px;">Nenhum resultado encontrado.</p>
+        
+    </div>
+</main>
+</main>
+
+    <!-- Rodapé global, presente em todas as páginas -->
+    <footer>
+      <div class="footer-container">
+        <img
+          src="/static/images/footer-logo.png"
+          alt="Logo do rodapé"
+          class="footer-logo"
+        />
+        <p>
+          © 2024 Monitoramento de Gastos Públicos - Todos os direitos
+          reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
