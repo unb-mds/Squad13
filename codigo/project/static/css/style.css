@@ -266,7 +266,8 @@ ol li::marker {
   }
 
   .barra-navegacao {
-    flex-direction: row;  
+    flex-direction: row;
+    top: 125px;
   }
 
   .nav-link {
@@ -286,13 +287,14 @@ ol li::marker {
   }
 
   .dropdown-btn {
-    width: auto;  /* Ajuste para o tamanho mais natural do botão */
-    padding: 6px 12px;  /* Diminuir um pouco o padding para não ficar grande */
+    width: auto; /* Ajuste para o tamanho mais natural do botão */
+    padding: 6px 12px; /* Diminuir um pouco o padding para não ficar grande */
   }
 
   /* Ajuste para remover o recuo das listas, deixando alinhado com o texto */
-  ul, ol {
-    padding-left: 1rem;  /* Ajusta o padding à esquerda para ficar igual ao texto normal */
+  ul,
+  ol {
+    padding-left: 1rem; /* Ajusta o padding à esquerda para ficar igual ao texto normal */
     margin-left: 0;
   }
 }
@@ -329,8 +331,9 @@ ol li::marker {
   }
 
   /* Ajuste para remover o recuo das listas e alinhá-las com o texto */
-  ul, ol {
-    padding-left: 1rem;  /* Ajusta o padding a esquerda para ficar igual ao texto normal */
+  ul,
+  ol {
+    padding-left: 1rem; /* Ajusta o padding a esquerda para ficar igual ao texto normal */
     margin-left: 0;
   }
 }
@@ -358,8 +361,9 @@ ol li::marker {
   }
 
   /* Ajuste para remover o recuo das listas e alinhá-las com o texto */
-  ul, ol {
-    padding-left: 1rem;  /* Ajusta o padding a esquerda para ficar igual ao texto normal */
+  ul,
+  ol {
+    padding-left: 1rem; /* Ajusta o padding a esquerda para ficar igual ao texto normal */
     margin-left: 0;
   }
 }
