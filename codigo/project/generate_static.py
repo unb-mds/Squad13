@@ -26,6 +26,10 @@ def copy_static_files():
 def index():
     return render_template("index.html")
 
+@app.route("/base")
+def base():
+    return render_template("base.html")
+
 @app.route("/charts")
 def charts():
     return render_template("charts.html")
@@ -42,6 +46,7 @@ def generate_static_pages():
     with app.test_request_context():
         pages = {
             "index.html": index(),
+            "base.html": base(),
             "charts.html": charts(),
             "tables.html": tables(),
         }
