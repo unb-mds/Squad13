@@ -20,33 +20,32 @@ Este projeto consiste na criação de um site hospedado no GitHub Pages para a a
 ## 👥 Colaboradores
 O projeto está sendo desenvolvido por um grupo de seis alunos da disciplina, conforme lista abaixo:
 
-- **[Arthur Mendonça](https://github.com/ArtyMend07)** - Função e responsabilidade
-- **[Gabriel da Cunha](https://github.com/Nibaacriba)** - Criação dos requisitos 
-- **[Gabriel Lopes](https://github.com/BrzGab)** - Função e responsabilidade
-- **[João Pedro](https://github.com/johnaopedro)** - Função e responsabilidade
-- **[Julia Gabriela](https://github.com/JuliaGabP)** - Criação dos requisitos, desenvolvimento das atas de reunião
-- **[Lucas Mendonça](https://github.com/lucasarruda9)** - Função e responsabilidade
+- **[Arthur Mendonça](https://github.com/ArtyMend07)** - Desenvolvedor
+- **[Gabriel da Cunha](https://github.com/Nibaacriba)** - Product Owner
+- **[Gabriel Lopes](https://github.com/BrzGab)** - Desenvolvedor
+- **[João Pedro](https://github.com/johnaopedro)** - Desenvolvedor e estruturador da maioria das issues.
+- **[Julia Gabriela](https://github.com/JuliaGabP)** - Scrum Master
+- **[Lucas Mendonça](https://github.com/lucasarruda9)** - Desenvolvedor
 
 ## 🚀 Estrutura do Projeto
 O repositório está organizado da seguinte maneira:
-- **/docs** - Arquivos e documentação de apoio ao projeto.
-- **/src** - Código fonte do site.
-- **/assets** - Recursos estáticos, como imagens, arquivos CSS.
+- **/docs** - Arquivos estáticos para executção do GitHub Pages.
+- **/documentacao** - Arquivos de documentação que auxiliam a entender o desenvolvimento do projeto.
+- **/codigo** - Código para ser executado na máquina do usuário caso ele deseje.
+- **Requirements.txt** - Dependências do projeto.
 
 ## 👨‍💻 Instalação e uso
 Comandos básicos necessários:
-```
-    git clone
-    git cd
-    git pull
-    
-```
 
 Primeiro, use o comando `git clone https://github.com/unb-mds/Squad13` para conseguir clonar esse repositório em sua máquina.
 
 Depois, use o comando `cd Squad13` para acessar o diretório principal do repositório.
 
 Caso haja atualizações e já tenha clonado o repositório na máquina, será necessário utilizar o comando `git pull` no diretório principal para atualizar o repositório local.
+
+Instale as dependências por meio do pip install -r requirements.txt.
+
+Acesse a pasta código.
 
 Para Acessar o site localmente será preciso executar o arquivo app.py com o comando no terminal `python3 app.py`. Após a execução do arquivo, será gerado um link http://localhost, basta apertar a tecla ctrl e clicar com o mouse esquerdo no link, ou colar o link no navegador para acessar o site diretamente de sua máquina.
 
@@ -55,7 +54,7 @@ Para Acessar o site localmente será preciso executar o arquivo app.py com o com
 Os dados de gastos públicos do DF foram coletados a partir de bases de dados oficiais disponíveis publicamente, como portais de transparência. Durante o projeto, os dados serão filtrados, categorizados e formatados para otimizar a visualização e análise.
 
 ## 🌐 Acesso ao Site
-O projeto será hospedado no GitHub Pages e pode ser acessado pelo link: [Gastos Públicos do Distrito Federal]().
+O projeto será hospedado no GitHub Pages e pode ser acessado pelo link: [Gastos Públicos do Distrito Federal](https://unb-mds.github.io/Squad13/index.html).
 
 ## 📞 Contato
 Caso tenha dúvidas ou sugestões, entre em contato com um dos colaboradores.
@@ -65,3 +64,4 @@ Caso tenha dúvidas ou sugestões, entre em contato com um dos colaboradores.
 | Versão |    Data    | Descrição                                      | Autor                                               | Revisão                                                      |
 | :----: | :--------: | ---------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
 | `1.0`  | 30/10/2024 | Estruturação do README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) | [Lucas Mendonça](https://github.com/lucasarruda9) |
+| `1.1`  | 01/12/2024 | Ajustes do README do projeto| [Julia Gabriela](https://github.com/JuliaGabP) | [Gabriel da Cunha](https://github.com/Nibaacriba) |
