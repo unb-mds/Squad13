@@ -71,18 +71,10 @@
                     </th>
                 </tr>
             </thead>
-  data = [
-      {'name': 'Alice', 'expense': 230},
-      {'name': 'Bob', 'expense': 150},
-      {'name': 'Charlie', 'expense': 320},
-      {'name': 'Daniel', 'expense': 500},
-      {'name': 'Eva', 'expense': 450},
-      {'name': 'Frank', 'expense': 300},
-      {'name': 'Grace', 'expense': 350},
-  ]
             <tbody>
+                <!-- Dados dinâmicos do lado cliente -->
                 {% for item in data %}
-                <tr>
+                <tr class="data-row">
                     <td style="padding: 10px; border-bottom: 1px solid #ccc;">{{ item.name }}</td>
                     <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ {{ item.expense }}</td>
                 </tr>
@@ -91,12 +83,84 @@
         </table>
 
         <!-- Exibição de resultados -->
-        
+        {% if data %}
+            <p style="margin-top: 20px;">Exibindo {{ data|length }} resultado(s).</p>
+        {% else %}
             <p style="margin-top: 20px;">Nenhum resultado encontrado.</p>
-        
+        {% endif %}
     </div>
 </main>
-</main>
+
+<script>
+    // Dados do lado cliente (simulando dados estáticos aqui, substitua conforme necessário)
+    const data = [
+        { name: "João", expense: 200 },
+        { name: "Maria", expense: 150 },
+        { name: "Carlos", expense: 300 },
+        { name: "Ana", expense: 250 },
+    ];
+
+    // Variáveis de estado
+    let searchQuery = '';
+    let sortBy = 'name';
+    let sortOrder = 'asc';
+
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+    const tableBody = document.querySelector("#dataTable tbody");
+    const sortLinks = document.querySelectorAll(".sort-link");
+
+    // Função para renderizar a tabela
+    const renderTable = (filteredData) => {
+        tableBody.innerHTML = "";
+        filteredData.forEach(item => {
+            const row = `
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">${item.name}</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ ${item.expense}</td>
+                </tr>
+            `;
+            tableBody.innerHTML += row;
+        });
+    };
+
+    // Função de busca
+    searchButton.addEventListener("click", () => {
+        searchQuery = searchInput.value.toLowerCase();
+        const filteredData = data.filter(item => item.name.toLowerCase().includes(searchQuery));
+        renderTable(filteredData);
+    });
+
+    // Função de ordenação
+    sortLinks.forEach(link => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const sortKey = event.target.closest("a").dataset.sort;
+            sortOrder = event.target.closest("a").dataset.order === 'asc' ? 'desc' : 'asc';
+            event.target.closest("a").dataset.order = sortOrder;
+
+            // Atualizando o ícone da seta
+            if (sortKey === 'name') {
+                document.getElementById("sortIconName").textContent = sortOrder === 'asc' ? "🔼" : "🔽";
+            } else {
+                document.getElementById("sortIconExpense").textContent = sortOrder === 'asc' ? "🔼" : "🔽";
+            }
+
+            const sortedData = [...data].sort((a, b) => {
+                if (sortOrder === 'asc') {
+                    return a[sortKey] > b[sortKey] ? 1 : -1;
+                } else {
+                    return a[sortKey] < b[sortKey] ? 1 : -1;
+                }
+            });
+
+            renderTable(sortedData);
+        });
+    });
+
+    // Renderizar tabela inicial com dados
+    renderTable(data);
+</script>
 
     <!-- Rodapé global, presente em todas as páginas -->
     <footer>
