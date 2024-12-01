@@ -72,7 +72,12 @@
                 </tr>
             </thead>
             <tbody>
-                
+                {% for item in data %}
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">{{ item.name }}</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ {{ item.expense }}</td>
+                </tr>
+                {% endfor %}
             </tbody>
         </table>
 
