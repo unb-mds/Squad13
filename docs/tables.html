@@ -1,182 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gastos Públicos DF</title>
-    <link rel="stylesheet" href="static/css/style.css"/>
-  </head>
-  <body>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
     <header>
-      <nav class="header-container">
-        <div class="logo-container">
-          <img
-            src="static/images/logo.png"
-            alt="Logo"
-            class="header-logo"
-          />
-          <h1>Monitoramento De Gastos Públicos - DF</h1>
-        </div>
-        <div class="header-buttons">
-          <!-- Botões de navegação, com classe 'active' para a página atual -->
-          
-          <a href="index.html" class="btn-header">Início</a>
-          <a href="charts.html" class="btn-header active">Análise de Gráficos</a>
-          
-        </div>
-      </nav>
+        <nav class="header-container">
+            <div class="logo-container">
+                <img src="static/images/logo.png" alt="Logo" class="header-logo">
+                <h1>Monitoramento De Gastos Públicos - DF</h1>
+            </div>
+            <div class="header-buttons">
+                <a href="index.html" class="btn-header">Início</a>
+                <a href="charts.html" class="btn-header active">Análise de Gráficos</a>
+            </div>
+        </nav>
     </header>
 
-    <!-- Conteúdo da página -->
     <main>
-<!-- Barra de navegação -->
-<div class="barra-navegacao">
-    <a href="charts.html" class="nav-link">Gráficos</a>
-    <a href="tables.html" class="nav-link active">Tabelas</a>
-</div>
+        <div class="barra-navegacao">
+            <a href="charts.html" class="nav-link">Gráficos</a>
+            <a href="tables.html" class="nav-link active">Tabelas</a>
+        </div>
 
-<!-- Conteúdo principal -->
-<main>
-    <div class="content">
-        <h2>Detalhes dos Gastos Públicos</h2>
+        <div class="content">
+            <h2>Detalhes dos Gastos Públicos</h2>
 
-        <!-- Formulário de pesquisa -->
-        <form method="get" action="tables.html" style="margin-bottom: 20px;">
-            <input type="text" name="search" placeholder="Pesquisar por nome..." value="" style="padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; width: 250px;">
-            <button type="submit" style="padding: 8px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Pesquisar</button>
-        </form>
+            <!-- Formulário de pesquisa -->
+            <form id="searchForm" style="margin-bottom: 20px;">
+                <input id="searchInput" type="text" placeholder="Pesquisar por nome..." 
+                    style="padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; width: 250px;">
+                <button id="searchButton" type="button" 
+                    style="padding: 8px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Pesquisar
+                </button>
+            </form>
 
-        <!-- Tabela -->
-        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-            <thead>
-                <tr>
-                    <!-- Coluna Nome com botão de ordenação -->
-                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
-                        Nome
-                        <a href="tables?sort=name&amp;sort_order=asc" style="text-decoration: none; color: #0056b3;">
-                            
-                                <span>⇵</span> <!-- Seta padrão -->
-                            
-                        </a>
-                    </th>
+            <!-- Tabela -->
+            <table id="dataTable" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
+                            Nome
+                            <a href="#" id="sortName" data-sort="name" data-order="asc" style="text-decoration: none; color: #0056b3;">⇵</a>
+                        </th>
+                        <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
+                            Despesa
+                            <a href="#" id="sortExpense" data-sort="expense" data-order="asc" style="text-decoration: none; color: #0056b3;">⇵</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
 
-                    <!-- Coluna Despesa com botão de ordenação -->
-                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
-                        Despesa
-                        <a href="tables?sort=expense&amp;sort_order=asc" style="text-decoration: none; color: #0056b3;">
-                            
-                                <span>⇵</span> <!-- Seta padrão -->
-                            
-                        </a>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Dados dinâmicos do lado cliente -->
-                {% for item in data %}
-                <tr class="data-row">
-                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">{{ item.name }}</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ {{ item.expense }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <footer>
+        <div class="footer-container">
+            <img src="static/images/footer-logo.png" alt="Logo do rodapé" class="footer-logo">
+            <p>© 2024 Monitoramento de Gastos Públicos - Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-        <!-- Exibição de resultados -->
-        {% if data %}
-            <p style="margin-top: 20px;">Exibindo {{ data|length }} resultado(s).</p>
-        {% else %}
-            <p style="margin-top: 20px;">Nenhum resultado encontrado.</p>
-        {% endif %}
-    </div>
+    <script>
+        const data = [
+            { name: 'Alice', expense: 230 },
+            { name: 'Bob', expense: 150 },
+            { name: 'Charlie', expense: 320 },
+            { name: 'Daniel', expense: 500 },
+            { name: 'Eva', expense: 450 },
+            { name: 'Frank', expense: 300 },
+            { name: 'Grace', expense: 350 }
+        ];
 
-<script>
-    // Dados do lado cliente (simulando dados estáticos aqui, substitua conforme necessário)
-    const data = [
-        {'name': 'Alice', 'expense': 230},
-        {'name': 'Bob', 'expense': 150},
-        {'name': 'Charlie', 'expense': 320},
-        {'name': 'Daniel', 'expense': 500},
-        {'name': 'Eva', 'expense': 450},
-        {'name': 'Frank', 'expense': 300},
-        {'name': 'Grace', 'expense': 350},
-    ];
+        const tableBody = document.querySelector("#dataTable tbody");
+        const searchInput = document.getElementById("searchInput");
+        const searchButton = document.getElementById("searchButton");
+        const sortLinks = document.querySelectorAll("[id^='sort']");
 
-    // Variáveis de estado
-    let searchQuery = '';
-    let sortBy = 'name';
-    let sortOrder = 'asc';
-
-    const searchInput = document.getElementById("searchInput");
-    const searchButton = document.getElementById("searchButton");
-    const tableBody = document.querySelector("#dataTable tbody");
-    const sortLinks = document.querySelectorAll(".sort-link");
-
-    // Função para renderizar a tabela
-    const renderTable = (filteredData) => {
-        tableBody.innerHTML = "";
-        filteredData.forEach(item => {
-            const row = `
+        const renderTable = (data) => {
+            tableBody.innerHTML = data.map(item => `
                 <tr>
                     <td style="padding: 10px; border-bottom: 1px solid #ccc;">${item.name}</td>
                     <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ ${item.expense}</td>
                 </tr>
-            `;
-            tableBody.innerHTML += row;
+            `).join('');
+        };
+
+        searchButton.addEventListener("click", () => {
+            const query = searchInput.value.toLowerCase();
+            const filteredData = data.filter(item => item.name.toLowerCase().includes(query));
+            renderTable(filteredData);
         });
-    };
 
-    // Função de busca
-    searchButton.addEventListener("click", () => {
-        searchQuery = searchInput.value.toLowerCase();
-        const filteredData = data.filter(item => item.name.toLowerCase().includes(searchQuery));
-        renderTable(filteredData);
-    });
+        sortLinks.forEach(link => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                const sortKey = link.dataset.sort;
+                const sortOrder = link.dataset.order;
+                link.dataset.order = sortOrder === "asc" ? "desc" : "asc";
 
-    // Função de ordenação
-    sortLinks.forEach(link => {
-        link.addEventListener("click", (event) => {
-            event.preventDefault();
-            const sortKey = event.target.closest("a").dataset.sort;
-            sortOrder = event.target.closest("a").dataset.order === 'asc' ? 'desc' : 'asc';
-            event.target.closest("a").dataset.order = sortOrder;
-
-            // Atualizando o ícone da seta
-            if (sortKey === 'name') {
-                document.getElementById("sortIconName").textContent = sortOrder === 'asc' ? "🔼" : "🔽";
-            } else {
-                document.getElementById("sortIconExpense").textContent = sortOrder === 'asc' ? "🔼" : "🔽";
-            }
-
-            const sortedData = [...data].sort((a, b) => {
-                if (sortOrder === 'asc') {
-                    return a[sortKey] > b[sortKey] ? 1 : -1;
-                } else {
-                    return a[sortKey] < b[sortKey] ? 1 : -1;
-                }
+                const sortedData = [...data].sort((a, b) => {
+                    if (a[sortKey] > b[sortKey]) return sortOrder === "asc" ? 1 : -1;
+                    if (a[sortKey] < b[sortKey]) return sortOrder === "asc" ? -1 : 1;
+                    return 0;
+                });
+                renderTable(sortedData);
             });
-
-            renderTable(sortedData);
         });
-    });
 
-    // Renderizar tabela inicial com dados
-    renderTable(data);
-</script>
-</main>
-    <!-- Rodapé global, presente em todas as páginas -->
-    <footer>
-      <div class="footer-container">
-        <img
-          src="static/images/footer-logo.png"
-          alt="Logo do rodapé"
-          class="footer-logo"
-        />
-        <p>
-          © 2024 Monitoramento de Gastos Públicos - Todos os direitos
-          reservados.
-        </p>
-      </div>
-    </footer>
-  </body>
+        renderTable(data); // Renderização inicial
+    </script>
+</body>
 </html>
