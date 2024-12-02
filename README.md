@@ -109,7 +109,6 @@ O projeto será hospedado no GitHub Pages e pode ser acessado pelo link: [Gastos
 
 - [Projeto no Figma 🎨](https://www.figma.com/design/upqiRbw43pLCWSv6rOGds7/Design-do-Site?node-id=0-1&t=g4Gr2l0d9HDbIn57-1)
 - [Quadro do projeto no Miro 🧠](https://miro.com/app/board/uXjVLAvihcA=/?share_link_id=2002006945)
-- [Coleção de APIs 📑](https://www.postman.com/squad-13-8316)
 
 ## 📞 Contato
 

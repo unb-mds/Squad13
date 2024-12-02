@@ -86,11 +86,6 @@ A documentação do projeto está organizada nas seguintes pastas:
 - Link para o Figma da equipe, onde podem ser encontrados os protótipos do projeto realizados pela equipe.
 - **Caminho:** [Acessar o Figma da Equipe](https://www.figma.com/design/upqiRbw43pLCWSv6rOGds7/Design-do-Site?node-id=0-1&t=g4Gr2l0d9HDbIn57-1)
 
-### 16. **Postman da Equipe**
-
-- Link para o Postman da equipe, onde podem ser encontrados os endpoints selecionados pela equipe na API escolhida, assim como outros que foram testados.
-- **Caminho:** [Acessar o Postman da Equipe](https://www.postman.com/squad-13-8316)
-
 ## Como Navegar na Documentação
 
 Cada pasta contém documentos específicos que ajudam a entender diferentes aspectos do projeto. Para uma visão geral de cada área, consulte os arquivos dentro de cada pasta.
