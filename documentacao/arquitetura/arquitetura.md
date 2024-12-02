@@ -62,7 +62,7 @@ O **back-end** será desenvolvido em **Python**, utilizando o **Flask** como fra
 
 O sistema será integrado com a **API** do **PTGF**, permitindo que os dados sobre os gastos públicos sejam obtidos diretamente do Portal da Transparência do Governo Federal.
 
-##### **Coleta de Dados**
+#### **Coleta de Dados**
 
 A coleta de dados será feita por meio da **API** do **PTGF**, que disponibiliza informações detalhadas sobre os gastos públicos. O sistema filtrará esses dados para focar nos gastos específicos relacionados ao Distrito Federal, permitindo que a plataforma forneça informações precisas e relevantes para a análise.
 
