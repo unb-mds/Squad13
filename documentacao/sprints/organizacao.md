@@ -41,3 +41,8 @@
 - Release notes - Gabriel da Cunha Barbaceli; João Pedro Costa;
 - Criação de um design responsivo - Gabriel Lopes Amorim; Lucas Mendonça Arruda;
   
+## SPRINT 5
+- Documentação da Sprint 4 - Gabriel da Cunha Barbaceli; João Pedro Costa;
+- Documentação das atas de reunião - Julia Gabriela Cunha Paulino;
+- Criação das issues da semana - João Pedro Costa;
+- Documentação das funções na sprint - Julia Gabriela Cunha Paulino; João Pedro Costa;
