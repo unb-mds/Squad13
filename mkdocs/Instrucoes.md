@@ -81,3 +81,7 @@ Esse comando criará uma pasta chamada `site` com os arquivos necessários para 
 10. Publique/Atualize o site na branch gh-pages:
 
 Para publicar ou atualizar o `site`, basta copiar a pasta site criada pela build e colá-la na raiz da branch `gh-pages`. No entanto, para isso, deve-se fazer um PR indicando a intenção.
+
+#### Extra.
+
+O MkDocs utiliza o tema Material for MkDocs ou outros temas e permite que você personalize o estilo da documentação utilizando CSS. Com o CSS, é possível alterar a aparência da sua documentação, como cores, fontes, espaçamento e muito mais. O arquivo CSS pode ser encontrado em: `mkdocs/docs/style/style.css`.
