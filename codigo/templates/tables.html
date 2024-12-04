@@ -13,64 +13,90 @@
         <h2>Detalhes dos Gastos Públicos</h2>
 
         <!-- Formulário de pesquisa -->
-        <form method="get" action="{{ url_for('tables') }}" style="margin-bottom: 20px;">
-            <input type="text" name="search" placeholder="Pesquisar por nome..." value="{{ search_query or '' }}" style="padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; width: 250px;">
-            <button type="submit" style="padding: 8px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Pesquisar</button>
-        </form>
+        <div style="margin-bottom: 20px;">
+            <input id="search-input" type="text" placeholder="Pesquisar por nome..." style="padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; width: 250px;">
+            <button onclick="searchTable()" style="padding: 8px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Pesquisar</button>
+        </div>
 
         <!-- Tabela -->
         <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
             <thead>
                 <tr>
-                    <!-- Coluna Nome com botão de ordenação -->
                     <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
                         Nome
-                        <a href="{{ url_for('tables', sort='name', sort_order='asc' if sort_by != 'name' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: #0056b3;">
-                            {% if sort_by == 'name' %}
-                                {% if sort_order == 'asc' %}
-                                    <span>🔼</span> <!-- Seta para cima -->
-                                {% else %}
-                                    <span>🔽</span> <!-- Seta para baixo -->
-                                {% endif %}
-                            {% else %}
-                                <span>⇵</span> <!-- Seta padrão -->
-                            {% endif %}
-                        </a>
+                        <button onclick="sortTable('name')" style="background: none; border: none; color: #0056b3; cursor: pointer;">⇵</button>
                     </th>
-
-                    <!-- Coluna Despesa com botão de ordenação -->
                     <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
                         Despesa
-                        <a href="{{ url_for('tables', sort='expense', sort_order='asc' if sort_by != 'expense' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: #0056b3;">
-                            {% if sort_by == 'expense' %}
-                                {% if sort_order == 'asc' %}
-                                    <span>🔼</span> <!-- Seta para cima -->
-                                {% else %}
-                                    <span>🔽</span> <!-- Seta para baixo -->
-                                {% endif %}
-                            {% else %}
-                                <span>⇵</span> <!-- Seta padrão -->
-                            {% endif %}
-                        </a>
+                        <button onclick="sortTable('expense')" style="background: none; border: none; color: #0056b3; cursor: pointer;">⇵</button>
                     </th>
                 </tr>
             </thead>
-            <tbody>
-                {% for item in data %}
-                <tr>
-                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">{{ item.name }}</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ {{ item.expense }}</td>
-                </tr>
-                {% endfor %}
+            <tbody id="table-body">
+                <!-- Dados serão preenchidos dinamicamente -->
             </tbody>
         </table>
 
         <!-- Exibição de resultados -->
-        {% if data %}
-            <p style="margin-top: 20px;">Exibindo {{ data|length }} resultado(s).</p>
-        {% else %}
-            <p style="margin-top: 20px;">Nenhum resultado encontrado.</p>
-        {% endif %}
+        <p id="result-count" style="margin-top: 20px;">Exibindo 0 resultado(s).</p>
     </div>
 </main>
+
+<script>
+    // Dados em formato JSON diretamente no script
+    const data = [
+        { "name": "Alice", "expense": 230 },
+        { "name": "Bob", "expense": 150 },
+        { "name": "Charlie", "expense": 320 },
+        { "name": "Daniel", "expense": 500 },
+        { "name": "Eva", "expense": 450 },
+        { "name": "Frank", "expense": 300 },
+        { "name": "Grace", "expense": 350 }
+    ];
+
+    let sortOrder = 'asc'; // Ordem inicial
+
+    // Renderizar a tabela
+    function renderTable(data) {
+        const tbody = document.querySelector('#table-body');
+        const resultCount = document.querySelector('#result-count');
+        tbody.innerHTML = ''; // Limpar tabela existente
+
+        if (data.length === 0) {
+            resultCount.textContent = 'Nenhum resultado encontrado.';
+            return;
+        }
+
+        data.forEach(item => {
+            const row = `<tr>
+                <td style="padding: 10px; border-bottom: 1px solid #ccc;">${item.name}</td>
+                <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ ${item.expense}</td>
+            </tr>`;
+            tbody.innerHTML += row;
+        });
+
+        resultCount.textContent = `Exibindo ${data.length} resultado(s).`;
+    }
+
+    // Ordenar a tabela
+    function sortTable(key) {
+        sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
+        data.sort((a, b) => {
+            if (a[key] < b[key]) return sortOrder === 'asc' ? -1 : 1;
+            if (a[key] > b[key]) return sortOrder === 'asc' ? 1 : -1;
+            return 0;
+        });
+        renderTable(data);
+    }
+
+    // Filtrar os dados da tabela
+    function searchTable() {
+        const query = document.querySelector('#search-input').value.toLowerCase();
+        const filteredData = data.filter(item => item.name.toLowerCase().includes(query));
+        renderTable(filteredData);
+    }
+
+    // Carregar a tabela inicial
+    renderTable(data);
+</script>
 {% endblock %}
