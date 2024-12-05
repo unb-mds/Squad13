@@ -12,7 +12,7 @@ Exemplos de comportamentos que contribuem para criar um ambiente positivo para a
 
 * Demonstrar empatia e bondade com as outras pessoas
 * Respeitar opiniões, pontos de vista e experiências contrárias
-* Dar e receber feedbacks construtivos de maneira respeitosa
+* Dar e receber feedback construtivo de maneira respeitosa
 * Assumir responsabilidade, pedir desculpas às pessoas afetadas por nossos erros e aprender com a experiência
 * Focar no que é melhor não só para nós individualmente, mas para a comunidade em geral
 
@@ -46,7 +46,7 @@ A liderança da comunidade seguirá estas Diretrizes de Impacto na Comunidade pa
 
 ### 1. Ação Corretiva
 
-**Impacto na comunidade**: Uso de linguagem imprópria ou outro comportamento considerado anti-profissional ou repudiado pela comunidade.
+**Impacto na comunidade**: Uso de linguagem imprópria ou comportamento anti-profissional, considerado pela comunidade.
 
 **Consequência**: Aviso escrito e privado da liderança da comunidade, esclarecendo a natureza da violação e com a explicação do motivo pelo qual o comportamento era impróprio. Um pedido de desculpas público poderá ser solicitado.
 
