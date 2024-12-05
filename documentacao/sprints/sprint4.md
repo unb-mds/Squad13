@@ -42,7 +42,7 @@ Durante a Sprint 4, foram realizadas as seguintes atividades:
 
 - **Atualização do Arquivo Gitignore**:
 
-  - mplementação de melhorias no arquivo `.gitignore` para otimizar o gerenciamento de versões do projeto.
+  - implementação de melhorias no arquivo `.gitignore` para otimizar o gerenciamento de versões do projeto.
 
 - **Escrita do Release notes**:
 
@@ -105,6 +105,6 @@ Para a **Sprint 5**, os principais objetivos são:
 
 1. **Criação da release:** A equipe planeja utilizar as release notes elaboradas na Sprint 4 para criar e finalizar oficialmente a primeira release do projeto.
 
-2. **Melhoria no codigo do projeto:** Com a conclusão antecipada das tarefas principais, a equipe decidiu dedicar a última semana antes da entrega para realizar ajustes e otimizações no código, garantindo maior qualidade e eficiência.
+2. **Melhoria no código do projeto:** Com a conclusão antecipada das tarefas principais, a equipe decidiu dedicar a última semana antes da entrega para realizar ajustes e otimizações no código, garantindo maior qualidade e eficiência.
 
 3. **Revisão geral:** Além das melhorias no código, será realizada uma revisão detalhada de todos os entregáveis para assegurar que estão alinhados aos requisitos e padrões esperados, garantindo a excelência na entrega da release.
