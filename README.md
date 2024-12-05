@@ -35,7 +35,6 @@ O projeto está sendo desenvolvido por um grupo de seis alunos da disciplina, co
 
 O repositório está organizado da seguinte maneira:
 
-- **/docs** - Arquivos estáticos para executção do GitHub Pages.
 - **/documentacao** - Arquivos de documentação que auxiliam a entender o desenvolvimento do projeto.
 - **/codigo** - Código para ser executado na máquina do usuário caso ele deseje.
 - **Requirements.txt** - Dependências do projeto.
@@ -113,6 +112,8 @@ O projeto será hospedado no GitHub Pages e pode ser acessado pelo link: [Gastos
 ## 📞 Contato
 
 Caso tenha dúvidas ou sugestões, entre em contato com um dos colaboradores.
+
+- Email: gastosdfmonitor@gmail.com
 
 ### Histórico de versões
 
