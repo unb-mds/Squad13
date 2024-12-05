@@ -74,5 +74,3 @@ theme:
         name: Trocar para modo claro
 icon:
   repo: fontawesome/brands/git-alt
-include: 
-  - README.md
