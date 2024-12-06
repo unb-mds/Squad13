@@ -1,6 +1,11 @@
+---
+name: Template de Pull Request
+about: Template padrão para criação de pull requests no repositório
+---
+
 ## Descrição
 
-Descreva aqui as mudanças feitas neste pull request. Se possível, forneça detalhes sobre os motivos das alterações.
+Descreva as mudanças feitas neste pull request. Se possível, forneça detalhes sobre os motivos das alterações.
 
 ## Tipo de mudança
 
@@ -12,10 +17,10 @@ Descreva aqui as mudanças feitas neste pull request. Se possível, forneça det
 
 ## Issue Relacionada
 
-Se quiser fechar uma issue, escreva neste padrão:
+Se desejar fechar uma issue, escreva neste padrão:
 - closes #<numero_da_issue>
 
-Se quiser relacionar uma issue, escreva neste padrão:
+Se desejar relacionar uma issue, escreva neste padrão:
 - Issue #<numero_da_issue>
 
 ## Testes
@@ -24,7 +29,7 @@ Descreva aqui se a alteração foi testada e, se possível, explique como outros
 
 ## Questões em aberto
 
-Se houver questões em aberto, observações ou algo que precisa de mais revisão, por favor, liste-as aqui.
+Se houver questões em aberto, observações ou algo que precise de mais revisão, por favor, liste-as aqui.
 
 ## Checklist
 
