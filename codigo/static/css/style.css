@@ -244,9 +244,16 @@ ul li {
   background-color: #ddd;
 }
 
-/* MEDIA QUERIES - Tornando o site responsivo */
+/* Ajuste para remover o recuo das listas e alinhá-las com o texto */
+ul,
+ol {
+  padding-left: 1rem; /* Ajusta o padding a esquerda para ficar igual ao texto normal */
+  margin-left: 0;
+}
 
-/* Tablets e dispositivos móveis em paisagem */
+/* MEDIA QUERIES */
+
+/* Tablets e dispositivos móveis */
 @media (max-width: 1024px) {
   .header-container {
     flex-direction: column;
@@ -278,10 +285,7 @@ ul li {
   .titulo-principal {
     font-size: 2rem;
   }
-}
 
-/* Dispositivos móveis em retrato */
-@media (max-width: 768px) {
   h1 {
     font-size: 1.125rem;
   }
@@ -290,27 +294,18 @@ ul li {
     width: 2.5rem;
   }
 
-  .titulo-principal {
-    font-size: 1.8rem;
+  footer p {
+    font-size: 0.875rem;
   }
+}
 
+/* Dispositivos móveis */
+@media (max-width: 768px) {
   .content {
-    padding: 0.625rem;
     margin: 0.625rem;
   }
 
   .nav-link {
     font-size: 0.875rem;
   }
-
-  footer p {
-    font-size: 0.875rem;
-  }
 }
-  /* Ajuste para remover o recuo das listas e alinhá-las com o texto */
-  ul,
-  ol {
-    padding-left: 1rem; /* Ajusta o padding a esquerda para ficar igual ao texto normal */
-    margin-left: 0;
-  }
-
