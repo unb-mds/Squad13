@@ -1,7 +1,7 @@
 /* Estilos gerais */
 body {
   background-color: #f3f7fa;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -35,7 +35,6 @@ header {
 
 h1 {
   font-size: 1.25rem;
-  font-family: "Arial", sans-serif;
   margin: 0;
   color: #333;
 }
@@ -53,7 +52,6 @@ h1 {
   padding: 0.625rem 0.9375rem;
   border-radius: 0.3125rem;
   font-size: 0.875rem;
-  font-family: "Arial", sans-serif;
   transition: background-color 0.3s ease;
 }
 
@@ -106,7 +104,6 @@ main {
   color: #fff;
   text-decoration: none;
   padding: 0.75rem 1.25rem;
-  font-family: "Arial", sans-serif;
   font-size: 0.9375rem;
   font-weight: bold;
   margin: 0 0.9375rem;
@@ -174,28 +171,69 @@ h2 {
   font-size: 1.8rem;
   color: #0056b3;
   margin-bottom: 0.625rem;
+  font-weight: bold;
 }
 
 p,
-ul {
+ul,
+ol {
   font-size: 1.1rem;
   color: #333;
+  line-height: 1.6;
+}
+
+ul,
+ol {
+  margin-left: 0;
+  padding-left: 1.5rem;
 }
 
 ul {
   list-style-type: disc;
-  margin-left: 1.25rem;
 }
 
-ul li {
-  margin-bottom: 0.625rem;
+ul li,
+ol li {
+  margin-bottom: 0.5rem;
 }
 
 .description-container {
   background-color: #f0f7ff;
-  padding: 1.25rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
   border: 0.0625rem solid #d1e3f8;
+  margin-bottom: 2rem;
+}
+
+.description-container p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.description-container ol,
+.description-container ul {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-left: 0;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.description-container li {
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.description-container p:hover,
+.description-container li:hover {
+  background-color: #e6f2ff;
+  border-radius: 0.3rem;
 }
 
 /* Dropdown */
@@ -249,56 +287,54 @@ ul li {
 
 ul,
 ol {
-  padding-left: 1rem;
+  padding-left: 1.5rem;
   margin-left: 0;
 }
 
-/* NOVOS ESTILOS */
-
 /* Formulário de Pesquisa */
 .search-container {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
   flex-wrap: wrap;
-  max-width: 300px; 
+  max-width: 18.75rem;
 }
 
 .search-input {
-  padding: 8px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%; 
-  flex: 1; 
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  width: 100%;
+  flex: 1;
 }
 
 .search-button {
-  padding: 8px 15px;
+  padding: 0.5rem 0.9375rem;
   background-color: #0056b3;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .search-button:hover {
-  background-color: #004399; 
+  background-color: #004399;
 }
 
 /* Tabela de Dados */
 .data-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .table-header {
-  border-bottom: 2px solid #ccc;
-  padding: 10px;
+  border-bottom: 0.125rem solid #ccc;
+  padding: 0.625rem;
   text-align: left;
-  position: relative; 
+  position: relative;
 }
 
 .sort-button {
@@ -306,24 +342,24 @@ ol {
   border: none;
   color: #0056b3;
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 0.3125rem;
   font-size: 0.9rem;
 }
 
 .sort-button:hover {
-  color: #003d82; 
+  color: #003d82;
 }
 
 .data-table th,
 .data-table td {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-  text-align: left; 
-  padding-left: 15px; 
+  padding: 0.625rem;
+  border-bottom: 0.0625rem solid #ccc;
+  text-align: left;
+  padding-left: 0.9375rem;
 }
 
 .result-count {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   font-weight: bold;
 }
 
@@ -376,7 +412,7 @@ ol {
   }
 
   .search-container {
-    max-width: 100%; 
+    max-width: 100%;
   }
 
   .search-input {
@@ -396,8 +432,8 @@ ol {
 
   .data-table th,
   .data-table td {
-    padding: 8px;
-    padding-left: 10px; 
+    padding: 0.5rem;
+    padding-left: 0.625rem;
   }
 
   .search-input {
@@ -405,6 +441,6 @@ ol {
   }
 
   .search-container {
-    max-width: 250px; 
+    max-width: 15.625rem;
   }
 }
