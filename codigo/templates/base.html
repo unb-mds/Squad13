@@ -4,48 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Gastos Públicos DF{% endblock %}</title>
-    <link
-      rel="stylesheet"
-      href="static/css/style.css"/> 
+    <link rel="stylesheet" href="static/css/style.css"/> 
   </head>
   <body>
     <header>
-      <nav class="header-container">
-        <div class="logo-container">
+      <nav id="header-container"> <!-- Alterado de class para id -->
+        <div id="logo-container"> <!-- Alterado de class para id -->
           <img
             src="static/images/logo.png"
             alt="Logo"
-            class="header-logo"
-          />
+            id="header-logo" /> <!-- Alterado de class para id -->
           <h1>Monitoramento De Gastos Públicos - DF</h1>
         </div>
         <div class="header-buttons">
           <!-- Botões de navegação, com classe 'active' para a página atual -->
           {% if request.path == '/' %}
-          <a class="btn-header active">Início</a>
-          <a href="/charts" class="btn-header">Análise de Gráficos</a>
+            <a class="btn-header active">Início</a>
+            <a href="/charts" class="btn-header">Análise de Gráficos</a>
           {% elif request.path == '/charts' or request.path == '/tables' %}
-          <a href="/" class="btn-header">Início</a>
-          <a class="btn-header active"
-            >{% if request.path == '/charts' %}Análise de Gráficos {%elif
-            request.path == '/tables' %}Análise de Gastos{% endif %}</a
-          >
+            <a href="/" class="btn-header">Início</a>
+            <a class="btn-header active">
+              {% if request.path == '/charts' %}
+                Análise de Gráficos
+              {% elif request.path == '/tables' %}
+                Análise de Gastos
+              {% endif %}
+            </a>
           {% endif %}
         </div>
       </nav>
     </header>
 
     <!-- Conteúdo da página -->
-    <main>{% block content %}{% endblock %}</main>
+    <main>
+      {% block content %}
+        <!-- Exemplo de uso de #titulo-principal -->
+        <h2 id="titulo-principal">Título Principal</h2>
+        <!-- Outros conteúdos -->
+      {% endblock %}
+    </main>
 
     <!-- Rodapé global, presente em todas as páginas -->
     <footer>
-      <div class="footer-container">
+      <div id="footer-container"> <!-- Alterado de class para id -->
         <img
           src="{{ url_for('static', filename='images/footer-logo.png') }}"
           alt="Logo do rodapé"
-          class="footer-logo"
-        />
+          id="footer-logo" /> <!-- Alterado de class para id -->
         <p>
           © 2024 Monitoramento de Gastos Públicos - Todos os direitos
           reservados.

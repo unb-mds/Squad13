@@ -2,14 +2,14 @@
 
 {% block content %}
 <!-- Barra de navegação -->
-<div class="barra-navegacao">
+<div id="barra-navegacao"> <!-- Alterado de class para id -->
     <a href="{{ url_for('charts') }}" class="nav-link">Gráficos</a>
     <a href="{{ url_for('tables') }}" class="nav-link active">Tabelas</a>
 </div>
 
 <!-- Conteúdo principal -->
 <main>
-    <div class="content">
+    <div class="content" style="display: flex; flex-direction: column; justify-content: center">
         <h2>Detalhes dos Gastos Públicos</h2>
 
         <!-- Formulário de pesquisa -->
