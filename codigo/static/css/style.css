@@ -16,19 +16,19 @@ header {
   z-index: 20;
 }
 
-#header-container { /* Convertido de .header-container para #header-container */
+#header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#logo-container { /* Convertido de .logo-container para #logo-container */
+#logo-container {
   display: flex;
   align-items: center;
   gap: 0.625rem;
 }
 
-#header-logo { /* Convertido de .header-logo para #header-logo */
+#header-logo {
   width: 3.125rem;
   height: auto;
 }
@@ -76,6 +76,9 @@ main {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: white;
   padding: 1.25rem;
   border-radius: 0.625rem;
@@ -85,7 +88,7 @@ main {
 }
 
 /* Barra de navegação azul */
-#barra-navegacao { /* Convertido de .barra-navegacao para #barra-navegacao */
+#barra-navegacao { 
   background: linear-gradient(90deg, #003d82, #0056b3);
   padding: 0.9375rem 1.25rem;
   display: flex;
@@ -137,14 +140,14 @@ footer {
   border-top: 0.125rem solid #003d82;
 }
 
-#footer-container { /* Convertido de .footer-container para #footer-container */
+#footer-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
 }
 
-#footer-logo { /* Convertido de .footer-logo para #footer-logo */
+#footer-logo {
   width: 5rem;
   height: auto;
 }
@@ -156,7 +159,7 @@ footer p {
 }
 
 /* Estilos do conteúdo */
-#titulo-principal { /* Convertido de .titulo-principal para #titulo-principal */
+#titulo-principal {
   font-size: 2.5rem;
   color: #003d82;
   margin-bottom: 1.25rem;
@@ -244,18 +247,91 @@ ul li {
   background-color: #ddd;
 }
 
-/* Ajuste para remover o recuo das listas e alinhá-las com o texto */
 ul,
 ol {
-  padding-left: 1rem; /* Ajusta o padding a esquerda para ficar igual ao texto normal */
+  padding-left: 1rem;
   margin-left: 0;
 }
 
-/* MEDIA QUERIES */
+/* NOVOS ESTILOS */
+
+/* Formulário de Pesquisa */
+.search-container {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 300px; 
+}
+
+.search-input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; 
+  flex: 1; 
+}
+
+.search-button {
+  padding: 8px 15px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #004399; 
+}
+
+/* Tabela de Dados */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table-header {
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  position: relative; 
+}
+
+.sort-button {
+  background: none;
+  border: none;
+  color: #0056b3;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+
+.sort-button:hover {
+  color: #003d82; 
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left; 
+  padding-left: 15px; 
+}
+
+.result-count {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* RESPONSIVIDADE*/
 
 /* Celulares pequenos (até 480px) */
 @media (max-width: 480px) {
-  #header-container { /* Atualizado para ID */
+  #header-container {
     flex-direction: column;
     text-align: center;
   }
@@ -265,8 +341,8 @@ ol {
     margin-top: 0.625rem;
   }
 
-  #barra-navegacao { /* Atualizado para ID */
-    flex-direction: column;
+  #barra-navegacao {
+    flex-direction: row;
     top: 7.8125rem;
   }
 
@@ -274,7 +350,7 @@ ol {
     margin: 0.3125rem 0;
   }
 
-  #footer-container { /* Atualizado para ID */
+  #footer-container { 
     flex-direction: column;
   }
 
@@ -283,7 +359,7 @@ ol {
     margin: 0.625rem;
   }
 
-  #titulo-principal { /* Atualizado para ID */
+  #titulo-principal { 
     font-size: 2rem;
   }
 
@@ -291,12 +367,20 @@ ol {
     font-size: 1.125rem;
   }
 
-  #header-logo { /* Atualizado para ID */
+  #header-logo {
     width: 2.5rem;
   }
 
   footer p {
     font-size: 0.875rem;
+  }
+
+  .search-container {
+    max-width: 100%; 
+  }
+
+  .search-input {
+    width: 100%;
   }
 }
 
@@ -308,5 +392,19 @@ ol {
 
   .nav-link {
     font-size: 0.875rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px;
+    padding-left: 10px; 
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .search-container {
+    max-width: 250px; 
   }
 }

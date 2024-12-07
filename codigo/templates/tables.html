@@ -8,40 +8,39 @@
 </div>
 
 <!-- Conteúdo principal -->
-<main>
-    <div class="content" style="display: flex; flex-direction: column; justify-content: center">
-        <h2>Detalhes dos Gastos Públicos</h2>
+<div class="content">
+    <h2>Detalhes dos Gastos Públicos</h2>
 
-        <!-- Formulário de pesquisa -->
-        <div style="margin-bottom: 20px;">
-            <input id="search-input" type="text" placeholder="Pesquisar por nome..." style="padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; width: 250px;">
-            <button onclick="searchTable()" style="padding: 8px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Pesquisar</button>
-        </div>
-
-        <!-- Tabela -->
-        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-            <thead>
-                <tr>
-                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
-                        Nome
-                        <button onclick="sortTable('name')" style="background: none; border: none; color: #0056b3; cursor: pointer;">⇵</button>
-                    </th>
-                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
-                        Despesa
-                        <button onclick="sortTable('expense')" style="background: none; border: none; color: #0056b3; cursor: pointer;">⇵</button>
-                    </th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-                <!-- Dados serão preenchidos dinamicamente -->
-            </tbody>
-        </table>
-
-        <!-- Exibição de resultados -->
-        <p id="result-count" style="margin-top: 20px;">Exibindo 0 resultado(s).</p>
+    <!-- Formulário de pesquisa -->
+    <div class="search-container">
+        <input id="search-input" type="text" placeholder="Pesquisar por nome..." class="search-input">
+        <button onclick="searchTable()" class="search-button">Pesquisar</button>
     </div>
-</main>
 
+    <!-- Tabela -->
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>
+                    Nome
+                    <button onclick="sortTable('name')" class="sort-button">⇵</button>
+                </th>
+                <th>
+                    Despesa
+                    <button onclick="sortTable('expense')" class="sort-button">⇵</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Dados serão preenchidos dinamicamente -->
+        </tbody>
+    </table>
+
+    <!-- Exibição de resultados -->
+    <p id="result-count" class="result-count">Exibindo 0 resultado(s).</p>
+</div>
+
+<!-- Scripts para a tabela -->
 <script>
     // Dados em formato JSON diretamente no script
     const data = [
@@ -69,8 +68,8 @@
 
         data.forEach(item => {
             const row = `<tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ccc;">${item.name}</td>
-                <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ ${item.expense}</td>
+                <td>${item.name}</td>
+                <td>R$ ${item.expense}</td>
             </tr>`;
             tbody.innerHTML += row;
         });
