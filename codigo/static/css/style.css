@@ -365,8 +365,8 @@ ol {
 
 /* RESPONSIVIDADE*/
 
-/* Celulares pequenos (até 30rem) */
-@media (max-width: 30rem) {
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
   #header-container {
     flex-direction: column;
     text-align: center;
@@ -420,8 +420,8 @@ ol {
   }
 }
 
-/* Tablets e celulares em pé ou deitados (até 48rem) */
-@media (max-width: 48rem) {
+/* Tablets e celulares em pé ou deitados (até 768px) */
+@media (max-width: 768px) {
   .content {
     margin: 0.625rem;
   }
