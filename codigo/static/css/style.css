@@ -16,19 +16,19 @@ header {
   z-index: 20;
 }
 
-.header-container {
+#header-container { /* Convertido de .header-container para #header-container */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo-container {
+#logo-container { /* Convertido de .logo-container para #logo-container */
   display: flex;
   align-items: center;
   gap: 0.625rem;
 }
 
-.header-logo {
+#header-logo { /* Convertido de .header-logo para #header-logo */
   width: 3.125rem;
   height: auto;
 }
@@ -85,7 +85,7 @@ main {
 }
 
 /* Barra de navegação azul */
-.barra-navegacao {
+#barra-navegacao { /* Convertido de .barra-navegacao para #barra-navegacao */
   background: linear-gradient(90deg, #003d82, #0056b3);
   padding: 0.9375rem 1.25rem;
   display: flex;
@@ -137,14 +137,14 @@ footer {
   border-top: 0.125rem solid #003d82;
 }
 
-.footer-container {
+#footer-container { /* Convertido de .footer-container para #footer-container */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
 }
 
-.footer-logo {
+#footer-logo { /* Convertido de .footer-logo para #footer-logo */
   width: 5rem;
   height: auto;
 }
@@ -156,7 +156,7 @@ footer p {
 }
 
 /* Estilos do conteúdo */
-.titulo-principal {
+#titulo-principal { /* Convertido de .titulo-principal para #titulo-principal */
   font-size: 2.5rem;
   color: #003d82;
   margin-bottom: 1.25rem;
@@ -253,9 +253,9 @@ ol {
 
 /* MEDIA QUERIES */
 
-/* Tablets e dispositivos móveis */
-@media (max-width: 1024px) {
-  .header-container {
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  #header-container { /* Atualizado para ID */
     flex-direction: column;
     text-align: center;
   }
@@ -265,8 +265,8 @@ ol {
     margin-top: 0.625rem;
   }
 
-  .barra-navegacao {
-    flex-direction: row;
+  #barra-navegacao { /* Atualizado para ID */
+    flex-direction: column;
     top: 7.8125rem;
   }
 
@@ -274,15 +274,16 @@ ol {
     margin: 0.3125rem 0;
   }
 
-  .footer-container {
+  #footer-container { /* Atualizado para ID */
     flex-direction: column;
   }
 
   .content {
     padding: 0.9375rem;
+    margin: 0.625rem;
   }
 
-  .titulo-principal {
+  #titulo-principal { /* Atualizado para ID */
     font-size: 2rem;
   }
 
@@ -290,7 +291,7 @@ ol {
     font-size: 1.125rem;
   }
 
-  .header-logo {
+  #header-logo { /* Atualizado para ID */
     width: 2.5rem;
   }
 
@@ -299,7 +300,7 @@ ol {
   }
 }
 
-/* Dispositivos móveis */
+/* Tablets e celulares em pé ou deitados (até 768px) */
 @media (max-width: 768px) {
   .content {
     margin: 0.625rem;

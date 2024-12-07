@@ -4,26 +4,25 @@
 
 {% block content %}
 <!-- Barra de navegação -->
-<div class="barra-navegacao">
+<div id="barra-navegacao"> <!-- Alterado de class para id -->
     <a href="{{ url_for('charts') }}" class="nav-link active">Gráficos</a>
     <a href="{{ url_for('tables') }}" class="nav-link">Tabelas</a>
 </div>
 
 <!-- Conteúdo principal -->
-<main>
-    <div class="content">
-        <h2>Monitoramento de Gastos Públicos - DF</h2>
+<div class="content" style="display: flex; flex-direction: column; justify-content: center">
+    <h2>Monitoramento de Gastos Públicos - DF</h2>
 
-        <!-- Menu dropdown para escolha -->
-        <div class="dropdown">
-            <button class="dropdown-btn">Escolher</button>
-            <div class="dropdown-content">
-                <a href="#" onclick="atualizarGrafico('Despesas'); return false;">Despesas</a>
-                <a href="#" onclick="atualizarGrafico('Bolsa Família'); return false;">Bolsa Família</a>
-                <a href="#" onclick="atualizarGrafico('Notas Fiscais'); return false;">Notas Fiscais</a>
-                <a href="#" onclick="atualizarGrafico('Licitações'); return false;">Licitações</a>
-            </div>
+    <!-- Menu dropdown para escolha -->
+    <div class="dropdown">
+        <button class="dropdown-btn">Escolher</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="atualizarGrafico('Despesas'); return false;">Despesas</a>
+            <a href="#" onclick="atualizarGrafico('Bolsa Família'); return false;">Bolsa Família</a>
+            <a href="#" onclick="atualizarGrafico('Notas Fiscais'); return false;">Notas Fiscais</a>
+            <a href="#" onclick="atualizarGrafico('Licitações'); return false;">Licitações</a>
         </div>
+    </div>
 
         <!-- Div onde o gráfico será exibido -->
         <div id="grafico-plotly"></div>
