@@ -1,102 +1,106 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <!-- Barra de navegação -->
-<div class="barra-navegacao">
-    <a href="{{ url_for('charts') }}" class="nav-link">Gráficos</a>
-    <a href="{{ url_for('tables') }}" class="nav-link active">Tabelas</a>
+<div id="barra-navegacao">
+  <a href="{{ url_for('charts') }}" class="nav-link">Gráficos</a>
+  <a href="{{ url_for('tables') }}" class="nav-link active">Tabelas</a>
 </div>
 
 <!-- Conteúdo principal -->
-<main>
-    <div class="content">
-        <h2>Detalhes dos Gastos Públicos</h2>
+<div class="content">
+  <h2>Detalhes dos Gastos Públicos</h2>
 
-        <!-- Formulário de pesquisa -->
-        <div style="margin-bottom: 20px;">
-            <input id="search-input" type="text" placeholder="Pesquisar por nome..." style="padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; width: 250px;">
-            <button onclick="searchTable()" style="padding: 8px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Pesquisar</button>
-        </div>
+  <!-- Formulário de pesquisa -->
+  <div class="search-container">
+    <input
+      id="search-input"
+      type="text"
+      placeholder="Pesquisar por nome..."
+      class="search-input"
+    />
+    <button onclick="searchTable()" class="search-button">Pesquisar</button>
+  </div>
 
-        <!-- Tabela -->
-        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-            <thead>
-                <tr>
-                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
-                        Nome
-                        <button onclick="sortTable('name')" style="background: none; border: none; color: #0056b3; cursor: pointer;">⇵</button>
-                    </th>
-                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
-                        Despesa
-                        <button onclick="sortTable('expense')" style="background: none; border: none; color: #0056b3; cursor: pointer;">⇵</button>
-                    </th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-                <!-- Dados serão preenchidos dinamicamente -->
-            </tbody>
-        </table>
+  <!-- Tabela -->
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>
+          Nome
+          <button onclick="sortTable('name')" class="sort-button">⇵</button>
+        </th>
+        <th>
+          Despesa
+          <button onclick="sortTable('expense')" class="sort-button">⇵</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- Dados serão preenchidos dinamicamente -->
+    </tbody>
+  </table>
 
-        <!-- Exibição de resultados -->
-        <p id="result-count" style="margin-top: 20px;">Exibindo 0 resultado(s).</p>
-    </div>
-</main>
+  <!-- Exibição de resultados -->
+  <p id="result-count" class="result-count">Exibindo 0 resultado(s).</p>
+</div>
 
+<!-- Scripts para a tabela -->
 <script>
-    // Dados em formato JSON diretamente no script
-    const data = [
-        { "name": "Alice", "expense": 230 },
-        { "name": "Bob", "expense": 150 },
-        { "name": "Charlie", "expense": 320 },
-        { "name": "Daniel", "expense": 500 },
-        { "name": "Eva", "expense": 450 },
-        { "name": "Frank", "expense": 300 },
-        { "name": "Grace", "expense": 350 }
-    ];
+  // Dados em formato JSON diretamente no script
+  const data = [
+    { name: "Alice", expense: 230 },
+    { name: "Bob", expense: 150 },
+    { name: "Charlie", expense: 320 },
+    { name: "Daniel", expense: 500 },
+    { name: "Eva", expense: 450 },
+    { name: "Frank", expense: 300 },
+    { name: "Grace", expense: 350 },
+  ];
 
-    let sortOrder = 'asc'; // Ordem inicial
+  let sortOrder = "asc"; // Ordem inicial
 
-    // Renderizar a tabela
-    function renderTable(data) {
-        const tbody = document.querySelector('#table-body');
-        const resultCount = document.querySelector('#result-count');
-        tbody.innerHTML = ''; // Limpar tabela existente
+  // Renderizar a tabela
+  function renderTable(data) {
+    const tbody = document.querySelector("#table-body");
+    const resultCount = document.querySelector("#result-count");
+    tbody.innerHTML = ""; // Limpar tabela existente
 
-        if (data.length === 0) {
-            resultCount.textContent = 'Nenhum resultado encontrado.';
-            return;
-        }
+    if (data.length === 0) {
+      resultCount.textContent = "Nenhum resultado encontrado.";
+      return;
+    }
 
-        data.forEach(item => {
-            const row = `<tr>
-                <td style="padding: 10px; border-bottom: 1px solid #ccc;">${item.name}</td>
-                <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ ${item.expense}</td>
+    data.forEach((item) => {
+      const row = `<tr>
+                <td>${item.name}</td>
+                <td>R$ ${item.expense}</td>
             </tr>`;
-            tbody.innerHTML += row;
-        });
+      tbody.innerHTML += row;
+    });
 
-        resultCount.textContent = `Exibindo ${data.length} resultado(s).`;
-    }
+    resultCount.textContent = `Exibindo ${data.length} resultado(s).`;
+  }
 
-    // Ordenar a tabela
-    function sortTable(key) {
-        sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
-        data.sort((a, b) => {
-            if (a[key] < b[key]) return sortOrder === 'asc' ? -1 : 1;
-            if (a[key] > b[key]) return sortOrder === 'asc' ? 1 : -1;
-            return 0;
-        });
-        renderTable(data);
-    }
-
-    // Filtrar os dados da tabela
-    function searchTable() {
-        const query = document.querySelector('#search-input').value.toLowerCase();
-        const filteredData = data.filter(item => item.name.toLowerCase().includes(query));
-        renderTable(filteredData);
-    }
-
-    // Carregar a tabela inicial
+  // Ordenar a tabela
+  function sortTable(key) {
+    sortOrder = sortOrder === "asc" ? "desc" : "asc";
+    data.sort((a, b) => {
+      if (a[key] < b[key]) return sortOrder === "asc" ? -1 : 1;
+      if (a[key] > b[key]) return sortOrder === "asc" ? 1 : -1;
+      return 0;
+    });
     renderTable(data);
+  }
+
+  // Filtrar os dados da tabela
+  function searchTable() {
+    const query = document.querySelector("#search-input").value.toLowerCase();
+    const filteredData = data.filter((item) =>
+      item.name.toLowerCase().includes(query)
+    );
+    renderTable(filteredData);
+  }
+
+  // Carregar a tabela inicial
+  renderTable(data);
 </script>
 {% endblock %}
