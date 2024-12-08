@@ -1,106 +1,74 @@
 {% extends 'base.html' %} {% block content %}
 <!-- Barra de navegação -->
 <div id="barra-navegacao">
-  <a href="{{ url_for('charts') }}" class="nav-link">Gráficos</a>
-  <a href="{{ url_for('tables') }}" class="nav-link active">Tabelas</a>
+    <a href="{{ url_for('charts') }}" class="nav-link">Gráficos</a>
+    <a href="{{ url_for('tables') }}" class="nav-link active">Tabelas</a>
 </div>
 
 <!-- Conteúdo principal -->
-<div class="content">
-  <h2>Detalhes dos Gastos Públicos</h2>
+<main>
+    <div class="content">
+        <h2>Detalhes dos Gastos Públicos</h2>
 
-  <!-- Formulário de pesquisa -->
-  <div class="search-container">
-    <input
-      id="search-input"
-      type="text"
-      placeholder="Pesquisar por nome..."
-      class="search-input"
-    />
-    <button onclick="searchTable()" class="search-button">Pesquisar</button>
-  </div>
+        <!-- Formulário de pesquisa -->
+        <form method="get" action="{{ url_for('tables') }}" style="margin-bottom: 20px;">
+            <input type="text" name="search" placeholder="Pesquisar por mês..." value="{{ search_query or '' }}" style="padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; width: 250px;">
+            <button type="submit" style="padding: 8px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">Pesquisar</button>
+        </form>
 
-  <!-- Tabela -->
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th>
-          Nome
-          <button onclick="sortTable('name')" class="sort-button">⇵</button>
-        </th>
-        <th>
-          Despesa
-          <button onclick="sortTable('expense')" class="sort-button">⇵</button>
-        </th>
-      </tr>
-    </thead>
-    <tbody id="table-body">
-      <!-- Dados serão preenchidos dinamicamente -->
-    </tbody>
-  </table>
+        <!-- Tabela -->
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+                <tr>
+                    <!-- Coluna Mês com botão de ordenação -->
+                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
+                        Mês
+                        <a href="{{ url_for('tables', sort='mes', sort_order='asc' if sort_by != 'mes' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: #0056b3;">
+                            {% if sort_by == 'mes' %}
+                                {% if sort_order == 'asc' %}
+                                    <span>🔼</span> <!-- Seta para cima -->
+                                {% else %}
+                                    <span>🔽</span> <!-- Seta para baixo -->
+                                {% endif %}
+                            {% else %}
+                                <span>⇵</span> <!-- Seta padrão -->
+                            {% endif %}
+                        </a>
+                    </th>
 
-  <!-- Exibição de resultados -->
-  <p id="result-count" class="result-count">Exibindo 0 resultado(s).</p>
-</div>
+                    <!-- Coluna Gasto com botão de ordenação -->
+                    <th style="border-bottom: 2px solid #ccc; padding: 10px; text-align: left;">
+                        Gasto
+                        <a href="{{ url_for('tables', sort='gasto', sort_order='asc' if sort_by != 'gasto' or sort_order == 'desc' else 'desc') }}" style="text-decoration: none; color: #0056b3;">
+                            {% if sort_by == 'gasto' %}
+                                {% if sort_order == 'asc' %}
+                                    <span>🔼</span> <!-- Seta para cima -->
+                                {% else %}
+                                    <span>🔽</span> <!-- Seta para baixo -->
+                                {% endif %}
+                            {% else %}
+                                <span>⇵</span> <!-- Seta padrão -->
+                            {% endif %}
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">{{ item.mes }}</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #ccc;">R$ {{ item.gasto }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
-<!-- Scripts para a tabela -->
-<script>
-  // Dados em formato JSON diretamente no script
-  const data = [
-    { name: "Alice", expense: 230 },
-    { name: "Bob", expense: 150 },
-    { name: "Charlie", expense: 320 },
-    { name: "Daniel", expense: 500 },
-    { name: "Eva", expense: 450 },
-    { name: "Frank", expense: 300 },
-    { name: "Grace", expense: 350 },
-  ];
-
-  let sortOrder = "asc"; // Ordem inicial
-
-  // Renderizar a tabela
-  function renderTable(data) {
-    const tbody = document.querySelector("#table-body");
-    const resultCount = document.querySelector("#result-count");
-    tbody.innerHTML = ""; // Limpar tabela existente
-
-    if (data.length === 0) {
-      resultCount.textContent = "Nenhum resultado encontrado.";
-      return;
-    }
-
-    data.forEach((item) => {
-      const row = `<tr>
-                <td>${item.name}</td>
-                <td>R$ ${item.expense}</td>
-            </tr>`;
-      tbody.innerHTML += row;
-    });
-
-    resultCount.textContent = `Exibindo ${data.length} resultado(s).`;
-  }
-
-  // Ordenar a tabela
-  function sortTable(key) {
-    sortOrder = sortOrder === "asc" ? "desc" : "asc";
-    data.sort((a, b) => {
-      if (a[key] < b[key]) return sortOrder === "asc" ? -1 : 1;
-      if (a[key] > b[key]) return sortOrder === "asc" ? 1 : -1;
-      return 0;
-    });
-    renderTable(data);
-  }
-
-  // Filtrar os dados da tabela
-  function searchTable() {
-    const query = document.querySelector("#search-input").value.toLowerCase();
-    const filteredData = data.filter((item) =>
-      item.name.toLowerCase().includes(query)
-    );
-    renderTable(filteredData);
-  }
-
-  // Carregar a tabela inicial
-  renderTable(data);
-</script>
+        <!-- Exibição de resultados -->
+        {% if data %}
+            <p style="margin-top: 20px;">Exibindo {{ data|length }} resultado(s).</p>
+        {% else %}
+            <p style="margin-top: 20px;">Nenhum resultado encontrado.</p>
+        {% endif %}
+    </div>
+</main>
 {% endblock %}
