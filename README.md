@@ -102,7 +102,7 @@ Os dados de gastos públicos do DF foram coletados a partir de bases de dados of
 
 ## 🌐 Acesso ao Site
 
-O projeto será hospedado no GitHub Pages e pode ser acessado pelo link: [Gastos Públicos do Distrito Federal](https://unb-mds.github.io/Squad13/index.html).
+O projeto será hospedado no GitHub Pages e pode ser acessado pelo link: [Gastos Públicos do Distrito Federal](monitoramentogastospublicos202402.up.railway.app).
 
 ## 🔨 Ferramentas
 
@@ -123,3 +123,4 @@ Caso tenha dúvidas ou sugestões, entre em contato com um dos colaboradores.
 | `0.1.1` | 01/12/2024 | Ajustes do README do projeto      | [Julia Gabriela](https://github.com/JuliaGabP)    | [Gabriel da Cunha](https://github.com/Nibaacriba) |
 | `0.2.0` | 01/12/2024 | Adição da seção de contribuição   | [Gabriel da Cunha](https://github.com/Nibaacriba) | [Julia Gabriela](https://github.com/JuliaGabP)    |
 | `0.3.0` | 01/12/2024 | Adição da seção de ferramentas   | [João Pedro](https://github.com/johnaopedro) | [Artur Mendonça](https://github.com/ArtyMend07)    |
+| `0.3.1` | 09/12/2024 | correção do url do site   | [Gabriel da Cunha](https://github.com/Nibaacriba) | [João Pedro](https://github.com/johnaopedro)    |
