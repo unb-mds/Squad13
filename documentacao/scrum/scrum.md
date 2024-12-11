@@ -1,7 +1,7 @@
 # O que é Scrum?<br>
 
 O Scrum, criado por Ken Schwaber e Jeff Sutherland, é um método ágil e prático fundamentado em sprints, garantindo revisão e aperfeiçoamentos constantes para que o resultado seja sempre o melhor possível.
-Essa metodologia traz consigo diversos benefícios para quem o implementa, como a organização e o desempenho. A organizacao é feita por meio de Daily Scrum, que facilitam a identificação e resolução de problemas, ajudando as equipes a se adaptarem rapidamente às mudanças, resolvendo problemas de forma colaborativa e entregando resultados de alta qualidade de maneira eficiente.
+Essa metodologia traz consigo diversos benefícios para quem o implementa, como a organização e o desempenho. A organização é feita por meio de Daily Scrum, que facilitam a identificação e resolução de problemas, ajudando as equipes a se adaptarem rapidamente às mudanças, resolvendo problemas de forma colaborativa e entregando resultados de alta qualidade de maneira eficiente.
 <br>
 <br>
 Para estruturar um trabalho com Scrum, é preciso definir papéis, criar o backlog de requisitos (ou product backlog), planejar sprints e definir as cerimônias para acompanhar o progresso do projeto.
@@ -148,7 +148,7 @@ Para gerenciar o progresso, pode-se utilizar as Issues no GitHub, organizando as
 A primeira entrega do projeto será dividida em 6 sprints, todas com seus respectivos requisitos e data de ínicio e término.
 <br><br>
 
-| Ordem | Requisitos a comprir 🎯 | Data da sprint ⏰         |
+| Ordem | Requisitos a cumprir 🎯 | Data da sprint ⏰         |
 | :---- | :---------------------- | :------------------------ |
 | 1     | 📌 R1 e R2              | 28/10/2024 até 03/11/2024 |
 | 2     | 📌 R3 e R4              | 04/11/2024 até 10/11/2024 |
@@ -163,7 +163,7 @@ A primeira entrega do projeto será dividida em 6 sprints, todas com seus respec
 | :----------- | :---------------------------------------------------------------------------------------------------- |
 | Backlog      | Todas as tarefas da segunda entrega (implementação final, testes, publicação).                        |
 | Em Progresso | Tarefas que estão sendo implementadas (ex.: exibição de dados, gráficos interativos, responsividade). |
-| Revisão      | tarefas concluídas, aguardando revisão ou testes finais.                                              |
+| Revisão      | Tarefas concluídas, aguardando revisão ou testes finais.                                              |
 | Concluído    | Tarefas terminadas e verificadas, incluindo a publicação no GitHub Pages e documentação.              |
 
 <br><br>
@@ -185,5 +185,5 @@ Após completar a entrega 2, o projeto estará pronto e publicado no GitHub Page
 
 | Versão  |    Data    | Descrição                                                  | Autor                                             | Revisão                                        |
 | :-----: | :--------: | ---------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------- |
-| `0.1.0` | 02/11/2024 | Estruturacão do documento                                  | [Lucas Mendonça](https://github.com/lucasarruda9) | [Julia Gabriela](https://github.com/JuliaGabP) |
-| `0.2.0` | 03/11/2024 | atualização do resumo sobre scrum, requisitos da release 1 | [Lucas Mendonça](https://github.com/lucasarruda9) | [Julia Gabriela](https://github.com/JuliaGabP) |
+| `0.1.0` | 02/11/2024 | Estruturação do documento                                  | [Lucas Mendonça](https://github.com/lucasarruda9) | [Julia Gabriela](https://github.com/JuliaGabP) |
+| `0.2.0` | 03/11/2024 | Atualização do resumo sobre scrum, requisitos da release 1 | [Lucas Mendonça](https://github.com/lucasarruda9) | [Julia Gabriela](https://github.com/JuliaGabP) |
