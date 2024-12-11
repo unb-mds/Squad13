@@ -9,7 +9,7 @@ São essenciais para o funcionamento do site e definem as funcionalidades que el
 ### - Visualização de dados:
 
 - Exibir gráficos e tabelas interativas que representem os gastos públicos do Distrito Federal;
-- Permitir filtros por categoriaa de gastos (ex.: saúde, educação, segurança);
+- Permitir filtros por categoria de gastos (ex.: saúde, educação, segurança);
 - Oferecer a opção de visualizar os gastos por período (ano, trimestre, mês);
 - Fornecer uma opção para download dos dados em formatos comuns;
 - Informar os dados básicos sobre os fornecedores pagos com o dinheiro público;
