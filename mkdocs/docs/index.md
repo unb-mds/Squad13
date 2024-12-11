@@ -18,7 +18,8 @@ Este projeto consiste na criação de um site hospedado no GitHub Pages para a a
 - **HTML, CSS**: Para a construção do front-end.
 - **Python**: Para a construção do front-end.
 - **GitHub**: Para controle de versão e colaboração entre os membros do grupo.
-- **GitHub Pages**: Para hospedagem do site.
+- **GitHub Pages**: Para hospedagem do site de documentação.
+- **Railway**: Para hospedagem do site.
 
 ## 👥 Colaboradores
 
@@ -35,7 +36,6 @@ O projeto está sendo desenvolvido por um grupo de seis alunos da disciplina, co
 
 O repositório está organizado da seguinte maneira:
 
-- **/docs** - Arquivos estáticos para executção do GitHub Pages.
 - **/documentacao** - Arquivos de documentação que auxiliam a entender o desenvolvimento do projeto.
 - **/codigo** - Código para ser executado na máquina do usuário caso ele deseje.
 - **Requirements.txt** - Dependências do projeto.
@@ -103,7 +103,7 @@ Os dados de gastos públicos do DF foram coletados a partir de bases de dados of
 
 ## 🌐 Acesso ao Site
 
-O projeto será hospedado no GitHub Pages e pode ser acessado pelo link: [Gastos Públicos do Distrito Federal](https://unb-mds.github.io/Squad13/index.html).
+O projeto será hospedado no GitHub Pages e pode ser acessado pelo link: [Gastos Públicos do Distrito Federal](http://monitoramentogastospublicos202402.up.railway.app).
 
 ## 🔨 Ferramentas
 
@@ -114,6 +114,8 @@ O projeto será hospedado no GitHub Pages e pode ser acessado pelo link: [Gastos
 
 Caso tenha dúvidas ou sugestões, entre em contato com um dos colaboradores.
 
+- Email: gastosdfmonitor@gmail.com
+
 ### Histórico de versões
 
 | Versão  |    Data    | Descrição                         | Autor                                             | Revisão                                           |
@@ -122,3 +124,4 @@ Caso tenha dúvidas ou sugestões, entre em contato com um dos colaboradores.
 | `0.1.1` | 01/12/2024 | Ajustes do README do projeto      | [Julia Gabriela](https://github.com/JuliaGabP)    | [Gabriel da Cunha](https://github.com/Nibaacriba) |
 | `0.2.0` | 01/12/2024 | Adição da seção de contribuição   | [Gabriel da Cunha](https://github.com/Nibaacriba) | [Julia Gabriela](https://github.com/JuliaGabP)    |
 | `0.3.0` | 01/12/2024 | Adição da seção de ferramentas   | [João Pedro](https://github.com/johnaopedro) | [Artur Mendonça](https://github.com/ArtyMend07)    |
+| `0.3.1` | 09/12/2024 | correção do url do site   | [Gabriel da Cunha](https://github.com/Nibaacriba) | [João Pedro](https://github.com/johnaopedro)    |

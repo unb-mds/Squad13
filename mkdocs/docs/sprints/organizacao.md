@@ -41,3 +41,14 @@
 - Release notes - Gabriel da Cunha Barbaceli; João Pedro Costa;
 - Criação de um design responsivo - Gabriel Lopes Amorim; Lucas Mendonça Arruda;
   
+## SPRINT 5
+- Documentação das atas de reunião - Julia Gabriela Cunha Paulino;
+- Criação das issues da semana - João Pedro Costa;
+- Documentação das funções na sprint - Julia Gabriela Cunha Paulino; João Pedro Costa;
+- Preenchimento do arquivo organização - Julia Gabriela Cunha Paulino; João Pedro Costa;
+- Restruturação e correção de dados - Artur Mendonça Arruda;
+- Configuração de MkDocs para documentação de projeto e publicação via GitHub Pages - João Pedro Costa;
+- Criar documentação sobre a Sprint 4 - Gabriel da Cunha Barbaceli; João Pedro Costa;
+- Criar e configurar os Community Standards e a aba de Security - Lucas Mendonça Arruda;  
+- Revisão e reestruturação de responsividade - Gabriel Lopes Amorim;
+- Criar e Atualizar Release Notes - Gabriel da Cunha Barbaceli; João Pedro Costa;
