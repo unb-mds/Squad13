@@ -1,5 +1,5 @@
 site_name: Análise de Gastos Públicos do Distrito Federal
-repo_url: https://github.com/unb-mds/Squad13
+repo_url: https://github.com/unb-mds/Gastos-DF-2024-02
 
 extra_css:
   - style/style.css
@@ -14,6 +14,7 @@ nav:
       - 12/11/24: atas/atas_reunioes_semanais/ata_12_11_24.md
       - 17/11/24: atas/atas_reunioes_semanais/ata_17_11_24.md
       - 25/11/24: atas/atas_reunioes_semanais/ata_25_11_24.md
+      - 02/12/24: atas/atas_reunioes_semanais/ata_02_12_24.md
     - Reuniões:
       - 31/10/24: atas/ata_31_10_24.md
       - 02/11/24:
@@ -31,6 +32,8 @@ nav:
     - Sprint 1: sprints/sprint1.md
     - Sprint 2: sprints/sprint2.md
     - Sprint 3: sprints/sprint3.md
+    - Sprint 4: sprints/sprint4.md
+    - Sprint 5: sprints/sprint5.md
   - Scrum: scrum/scrum.md
   - Matriz de Competências: 
     - Formulario: matriz_de_competencias/formulario.md
