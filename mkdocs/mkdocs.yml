@@ -45,7 +45,7 @@ nav:
     - Baixa Fidelidade:
       - v0.1.0: prototipo-baixa-fidelidade/v0.1.0/v0.1.0.md
       - v0.1.1: prototipo-baixa-fidelidade/v0.1.1/v0.1.1.md
-  - User Story: user_story/user_story.md
+  - Stories: user_story/user_story.md
   - Estudos:
     - Releases: 
       - Notes: estudos/releases/notes.md

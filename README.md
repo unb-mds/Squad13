@@ -18,7 +18,8 @@ Este projeto consiste na criação de um site hospedado no GitHub Pages para a a
 - **HTML, CSS**: Para a construção do front-end.
 - **Python**: Para a construção do front-end.
 - **GitHub**: Para controle de versão e colaboração entre os membros do grupo.
-- **GitHub Pages**: Para hospedagem do site.
+- **GitHub Pages**: Para hospedagem do site de documentação.
+- **Railway**: Para hospedagem do site.
 
 ## 👥 Colaboradores
 
