@@ -21,7 +21,7 @@ Os requisitos são orientados a criar uma base sólida para o desenvolvimento, o
 | R23   | Acessibilidade    | Permitir navegação intuitiva para usuários sem conhecimento técnico                                                                                      | Alta 🔴       |
 | R24   | Acessibilidade    | Incluir texto alternativo para imagens e descrição para gráficos e tabelas                                                                               | Alta 🔴       |
 | R25   | Acessibilidade    | Incluir acessibilidade para deficientes visuais                                                                                                          | Baixa 🟢      |
-| R26   | Compatibilidade   | Suportar os principais navegadores(Chrome, Firefox, Safari, Edge)                                                                                        | Alta 🔴       |
+| R26   | Compatibilidade   | Suportar os principais navegadores (Chrome, Firefox, Safari, Edge)                                                                                       | Alta 🔴       |
 | R27   | Documentação      | Disponibilizar um guia de uso para mostrar como navegar e utilizar as funcionalidades                                                                    | Alta 🔴       |
 | R28   | Documentação      | Criar protótipo de alta fidelidade                                                                                                                       | Alta 🔴       |
 
@@ -30,7 +30,7 @@ Os requisitos são orientados a criar uma base sólida para o desenvolvimento, o
 ## Divisão das Sprints: Entrega Final
 
 <br>
-A segunda entrega do projeto será dividida em 8 sprints, todas com seus respectivos requisitos e data de ínicio e término.
+A segunda entrega do projeto será dividida em 8 sprints, todas com seus respectivos requisitos e data de início e término.
 <br><br>
 
 | Ordem | Requisitos a cumprir 🎯 | Data da sprint ⏰         |
