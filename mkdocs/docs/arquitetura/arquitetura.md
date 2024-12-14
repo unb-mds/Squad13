@@ -30,9 +30,29 @@ O objetivo principal do projeto é desenvolver uma plataforma que permita o moni
 
 ## **Visão dos Componentes**
 
+### **Model-View-Controller (MVC)**
+
+O projeto será desenvolvido utilizando a arquitetura **MVC** (Model-View-Controller). A separação em camadas facilita a manutenção, escalabilidade e a organização do código.
+
+#### **Model**
+
+A camada **Model** é responsável por gerenciar os dados do sistema e implementar as regras de negócios. Ela faz a comunicação com a base de dados e com fontes externas, como APIs, para garantir que os dados corretos sejam processados e disponibilizados.
+
+#### **View**
+
+A camada **View** é responsável pela apresentação dos dados ao usuário final. A interface gráfica será construída utilizando **HTML** e **CSS**, garantindo que o usuário tenha uma experiência visual agradável e acessível.
+
+#### **Controller**
+
+O **Controller** atua como intermediário entre a **Model** e a **View**. Ele recebe as ações do usuário, processa essas ações de acordo com as regras de negócios e atualiza a **View** com os resultados. O **Controller** também faz a mediação entre o **front-end** e o **back-end**, garantindo que os dados corretos sejam exibidos.
+
+#### **Outros Componentes**
+
+Além das camadas principais do modelo **MVC**, o projeto inclui componentes adicionais, como arquivos de configuração para o **Flask** e **Python**, variáveis de ambiente, chaves de **API** e bibliotecas externas para manipulação e visualização dos dados.
+
 ### **Front-end**
 
-O **front-end** será desenvolvido utilizando **HTML** e **CSS** para interatividade. A interface será otimizada para facilitar a navegação e a compreensão dos dados relacionados aos gastos públicos.
+O **front-end** será desenvolvido utilizando HTML e CSS para estruturar e estilizar a interface do usuário. A interface será otimizada para facilitar a navegação e a compreensão dos dados relacionados aos gastos públicos, garantindo uma experiência visual agradável e acessível.
 
 ### **Back-end**
 
