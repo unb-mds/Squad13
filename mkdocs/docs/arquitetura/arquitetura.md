@@ -6,7 +6,7 @@
 
 ### Propósito
 
-O propósito deste projeto é descrever a arquitetura de software do projeto **Esquadrão 13**, uma iniciativa que visa promover a transparência na gestão dos gastos públicos no Distrito Federal.
+O propósito deste projeto é descrever a arquitetura de software do projeto **Gastos-DF-2024-02**, uma iniciativa que visa promover a transparência na gestão dos gastos públicos no Distrito Federal.
 
 ### Objetivo
 
@@ -52,7 +52,7 @@ Além das camadas principais do modelo **MVC**, o projeto inclui componentes adi
 
 ### **Front-end**
 
-O **front-end** será desenvolvido utilizando **HTML**, **CSS** e **Python** para interatividade. A interface será otimizada para facilitar a navegação e a compreensão dos dados relacionados aos gastos públicos.
+O **front-end** será desenvolvido utilizando HTML e CSS para estruturar e estilizar a interface do usuário. A interface será otimizada para facilitar a navegação e a compreensão dos dados relacionados aos gastos públicos, garantindo uma experiência visual agradável e acessível.
 
 ### **Back-end**
 
