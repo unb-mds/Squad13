@@ -8,7 +8,7 @@ Cada participante forneceu uma autoavaliação em áreas como **Programação Or
 
 ### Competências Individuais
 
-- **Desenvolvedor 1**:
+- **Gabriel Barbaceli**:
   1. Programação Orientada a Objetos em Python: 1
   2. Confiança com Classes e Métodos em Python: 1
   3. Manipulação de Funções e Módulos em Python: 1
@@ -30,7 +30,7 @@ Cada participante forneceu uma autoavaliação em áreas como **Programação Or
   19. Colaboração em GitHub/GitLab: 4
   20. Web Scraping com Python: 1
 
-- **Desenvolvedor 2**:
+- **Gabriel Lopes**:
   1. Programação Orientada a Objetos em Python: 4
   2. Confiança com Classes e Métodos em Python: 5
   3. Manipulação de Funções e Módulos em Python: 5
@@ -52,7 +52,7 @@ Cada participante forneceu uma autoavaliação em áreas como **Programação Or
   19. Colaboração em GitHub/GitLab: 5
   20. Web Scraping com Python: 5
 
-  - **Desenvolvedor 3**:
+- **Julia Gabriela**:
   1. Programação Orientada a Objetos em Python: 4
   2. Confiança com Classes e Métodos em Python: 4
   3. Manipulação de Funções e Módulos em Python: 4
@@ -74,7 +74,7 @@ Cada participante forneceu uma autoavaliação em áreas como **Programação Or
   19. Colaboração em GitHub/GitLab: 4
   20. Web Scraping com Python: 2
 
-  - **Desenvolvedor 4**:
+- **João Pedro**:
   1. Programação Orientada a Objetos em Python: 2
   2. Confiança com Classes e Métodos em Python: 2
   3. Manipulação de Funções e Módulos em Python: 3
@@ -96,7 +96,7 @@ Cada participante forneceu uma autoavaliação em áreas como **Programação Or
   19. Colaboração em GitHub/GitLab: 3
   20. Web Scraping com Python: 1
 
-  - **Desenvolvedor 5**:
+- **Lucas Mendonça**:
   1. Programação Orientada a Objetos em Python: 5
   2. Confiança com Classes e Métodos em Python: 4
   3. Manipulação de Funções e Módulos em Python: 4
@@ -118,7 +118,7 @@ Cada participante forneceu uma autoavaliação em áreas como **Programação Or
   19. Colaboração em GitHub/GitLab: 4
   20. Web Scraping com Python: 1
 
-  - **Desenvolvedor 6**:
+- **Artur Mendonça**:
   1. Programação Orientada a Objetos em Python: 4
   2. Confiança com Classes e Métodos em Python: 4
   3. Manipulação de Funções e Módulos em Python: 4
