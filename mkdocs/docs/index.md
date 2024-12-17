@@ -123,5 +123,5 @@ Caso tenha dúvidas ou sugestões, entre em contato com um dos colaboradores.
 | `0.1.0` | 30/10/2024 | Estruturação do README do projeto | [Julia Gabriela](https://github.com/JuliaGabP)    | [Lucas Mendonça](https://github.com/lucasarruda9) |
 | `0.1.1` | 01/12/2024 | Ajustes do README do projeto      | [Julia Gabriela](https://github.com/JuliaGabP)    | [Gabriel da Cunha](https://github.com/Nibaacriba) |
 | `0.2.0` | 01/12/2024 | Adição da seção de contribuição   | [Gabriel da Cunha](https://github.com/Nibaacriba) | [Julia Gabriela](https://github.com/JuliaGabP)    |
-| `0.3.0` | 01/12/2024 | Adição da seção de ferramentas   | [João Pedro](https://github.com/johnaopedro) | [Artur Mendonça](https://github.com/ArtyMend07)    |
-| `0.3.1` | 09/12/2024 | correção do url do site   | [Gabriel da Cunha](https://github.com/Nibaacriba) | [João Pedro](https://github.com/johnaopedro)    |
+| `0.3.0` | 01/12/2024 | Adição da seção de ferramentas    | [João Pedro](https://github.com/johnaopedro)      | [Artur Mendonça](https://github.com/ArtyMend07)   |
+| `0.3.1` | 09/12/2024 | correção do url do site           | [Gabriel da Cunha](https://github.com/Nibaacriba) | [João Pedro](https://github.com/johnaopedro)      |
