@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # A branch da docs
+    paths:
+      - 'docs/**'  # Somente alterações na pasta "docs"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs
+          pip install mkdocs-material  # Se você usa o tema Material
+      - name: Build MkDocs site
+        run: |
+          mkdocs build --site-dir=site  # Gera o site diretamente na raiz (../site)
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # A branch onde o site será hospedado
+          folder: site  # O diretório com os arquivos gerados, agora na raiz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token do GitHub para autenticação

@@ -52,6 +52,7 @@ nav:
       - Tags: estudos/releases/tags.md
       - Versionamento: estudos/releases/Versionamento.md
     - Ambiente Virtual: estudos/Ambiente Virtual.md
+    - Mkdocs: estudos/Instrucoes.md
     - Scrum: estudos/Scrum.md
     - XP (eXtreme Programming): estudos/XP(eXtreme Programming).md
 theme: 
